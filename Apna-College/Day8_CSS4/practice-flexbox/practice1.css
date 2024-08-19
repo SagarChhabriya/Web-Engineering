@@ -1,0 +1,23 @@
+.site-header{
+    background-color: #F0F0C9;
+    padding: 1rem;
+}
+
+.site-header nav{
+    background-color: #fcfcdb;
+    padding: .5rem;
+}
+
+.site-header nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+.site-header nav li {
+	display: inline;
+	margin-left: .75rem;
+} 
+.site-header a {
+	color: #087F8C;
+	text-decoration: none;
+}
