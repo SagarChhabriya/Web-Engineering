@@ -148,3 +148,50 @@ Use semantic HTML elements to structure your content logically:
   <p>Footer content...</p>
 </footer>
 ```
+
+## HTML Elements Reference
+
+For a detailed list of HTML elements, visit the [MDN HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+
+## Non-Semantic Wrappers
+
+When no semantic element is appropriate for grouping elements, use `<div>` and `<span>`. These elements help group content for styling or scripting purposes. Apply classes to make them easier to target with CSS or JavaScript.
+
+```html
+<div class="container">
+  <p>This is some text inside a div.</p>
+</div>
+```
+
+## HTML Validation
+
+To ensure your HTML is correct and follows standards, use the [W3C Markup Validation Service](https://validator.w3.org/). Validating your HTML helps catch errors and improve compatibility across browsers.
+
+## Exercise
+
+Practice your HTML skills with these exercises:
+
+[Marking up a Letter](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+[Structuring a Page of Content](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
+
+## CSS Specifications
+
+Explore CSS specifications to understand the latest features and best practices for styling web pages.
+
+## Link and Visited States
+
+You can style links differently based on their state:
+
+```css
+a:link {
+  color: pink; /* Unvisited links */
+}
+
+a:visited {
+  color: green; /* Visited links */
+}
+
+a:hover {
+  text-decoration: none; /* Links when hovered */
+}
+```
