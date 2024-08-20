@@ -505,3 +505,136 @@ Use `::before` and `::after` to insert content before or after an element's actu
   content: " - End"; /* Adds " - End" after the content of .box */
 }
 ```
+
+---
+
+## Combinators [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+The final selectors we will look at are called combinators, because they combine other selectors in a way that gives them a useful relationship to each other and the location of content in the document.
+
+## Descendant combinator
+
+The descendant combinator — typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called descendant selectors.
+
+```css
+body article p
+```
+
+Example:
+
+```css
+.box p {
+  color: red;
+}
+```
+
+```html
+<div class="box"><p>Text in .box</p></div>
+<p>Text not in .box</p>
+```
+
+## Child combinator
+
+The child combinator (>) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first. Descendant elements further down the hierarchy don't match. For example, to select only `<p>` elements that are direct children of `<article>` elements:
+
+```css
+article > p
+```
+
+In this next example, we have an ordered list `<ol>` nested inside an unordered list `<ul>`. The child combinator selects only those `<li>` elements which are direct children of a `<ul>`, and styles them with a top border.<br>
+
+If you remove the > that designates this as a child combinator, you end up with a descendant selector and all `<li>` elements will get a red border.<br>
+
+![Child Combinator](/Apna-College/1-MDN/images/child-combinator.png)
+
+```css
+ul > li {
+  border-top: 5px solid red;
+}
+```
+
+```html
+<ul>
+  <li>Unordered item</li>
+  <li>
+    Unordered item
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ol>
+  </li>
+</ul>
+```
+
+## Next-sibling combinator
+
+The next-sibling combinator (+) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
+
+```css
+p + img
+```
+
+A common use case is to do something with a paragraph that follows a heading, as in the example below. In that example, we are looking for any paragraph which shares a parent element with an `<h1>`, and immediately follows that `<h1>`.<br><br>
+
+If you insert some other element such as a `<h2>` in between the `<h1>` and the `<p>`, you will find that the paragraph is no longer matched by the selector and so does not get the background and foreground color applied when the element is adjacent.
+
+![Next-Sibling-Combinator](/Apna-College/1-MDN/images/next-sibling-combinator.png)
+
+```css
+h1 + p {
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em;
+}
+```
+
+```html
+<article>
+  <h1>A heading</h1>
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</article>
+```
+
+## Subsequent-sibling combinator
+
+If you want to select siblings of an element even if they are not directly adjacent, then you can use the subsequent-sibling combinator (~). To select all `<img>` elements that come anywhere after `<p>` elements, we'd do this:
+
+```css
+p ~ img
+```
+
+In the example below we are selecting all `<p>` elements that come after the `<h1>`, and even though there is a `<div>` in the document as well, the `<p>` that comes after it is selected.
+
+![Subsequent-sibling-combinator](/Apna-College/1-MDN/images/subsequent-sibling-combinator.png)
+
+```css
+h1 ~ p {
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em;
+}
+```
+
+```html
+<article>
+  <h1>A heading</h1>
+  <p>I am a paragraph.</p>
+  <div>I am a div</div>
+  <p>I am another paragraph.</p>
+</article>
+```
+
+## Creating complex selectors with nesting
+
+[MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators#creating_complex_selectors_with_nesting)
