@@ -732,3 +732,234 @@ h1 ~ p {
 ## 42 Creating complex selectors with nesting
 
 [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators#creating_complex_selectors_with_nesting)
+
+
+<hr>
+
+# Cascade, specificity, and inheritance
+
+
+## 43 Conflicting rules
+CSS stands for Cascading Style Sheets, and that first word cascading is incredibly important to understand — the way that the cascade behaves is key to understanding CSS.<br><br>
+
+At some point, you will be working on a project and you will find that the CSS you thought should be applied to an element is not working. Often, the problem is that you create two rules that apply different values of the same property to the same element. Cascade and the closely-related concept of specificity are mechanisms that control which rule applies when there is such a conflict. The rule that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.<br><br>
+
+Also significant here is the concept of inheritance, which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause some behavior that you might not expect.<br><br>
+
+
+### Cascade
+Stylesheets cascade — at a very simple level, this means that the origin, the cascade layer, and the order of CSS rules matter. When two rules from the same cascade layer apply and both have equal specificity, the one that is defined last in the stylesheet is the one that will be used.
+
+In the below example, we have two rules that could apply to the <h1> element. The <h1> content ends up being colored blue. This is because both the rules are from the same source, have an identical element selector, and therefore, carry the same specificity, but the last one in the source order wins.
+
+```css
+h1 {
+  color: red;
+}
+h1 {
+  color: blue;
+}
+```
+
+```html
+<h1>This is my heading.</h1>
+```
+
+### Specificity
+Specificity is the algorithm that the browser uses to decide which property value is applied to an element. If multiple style blocks have different selectors that configure the same property with different values and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
+
+- An element selector is less specific; it will select all elements of that type that appear on a page, so it has less weight. Pseudo-element selectors have the same specificity as regular element selectors.
+
+- A class selector is more specific; it will select only the elements on a page that have a specific class attribute value, so it has more weight. Attribute selectors and pseudo-classes have the same weight as a class.
+
+[More about Specifity](/Apna-College/Day6_CSS2/Selectors/CSS-Specifity/)
+
+### Inheritance
+Inheritance also needs to be understood in this context — some CSS property values set on parent elements are inherited by their child elements, and some aren't.<br><br>
+
+For example, if you set a color and font-family on an element, every element inside it will also be styled with that color and font, unless you've applied different color and font values directly to them.<br><br>
+
+```css
+body {
+  color: blue;
+}
+
+span {
+  color: black;
+}
+```
+
+```html
+<p>As the body has been set to have a color of blue this is inherited through the descendants.</p>
+<p>We can change the color by targeting the element with a selector, such as this <span>span</span>.</p>
+```
+<br>
+Some properties do not inherit — for example, if you set a width of 50% on an element, all of its descendants do not get a width of 50% of their parent's width. If this was the case, CSS would be very frustrating to use!<br><br>
+
+`Note`: On MDN CSS property reference pages, you can find a technical information box called "Formal definition", which lists a number of data points about that property, including whether it is inherited or not. See the color property Formal definition section as an example.<br><br>
+
+
+## Understanding inheritance
+
+We'll start with inheritance. In the example below, we have a `<ul>` element with two levels of unordered lists nested inside it. We have given the outer `<ul>` a border, padding, and font color.<br><br>
+
+The color property is an inherited property. So, the color property value is applied to the direct children and also to the indirect children — the immediate child `<li>`s and those inside the first nested list. We have then added the class special to the second nested list and applied a different color to it. This then inherits down through its children.<br><br>
+
+
+![](/Apna-College/1-MDN/images/Inheritence.png)
+
+
+```css
+.main {
+  color: rebeccapurple;
+  border: 2px solid #ccc;
+  padding: 1em;
+}
+
+.special {
+  color: black;
+  font-weight: bold;
+}
+```
+
+
+```html
+<ul class="main">
+  <li>Item One</li>
+  <li>Item Two
+    <ul>
+      <li>2.1</li>
+      <li>2.2</li>
+    </ul>
+  </li>
+  <li>Item Three
+    <ul class="special">
+      <li>3.1
+        <ul>
+          <li>3.1.1</li>
+          <li>3.1.2</li>
+        </ul>
+      </li>
+      <li>3.2</li>
+    </ul>
+  </li>
+</ul>
+```
+
+<br><br>
+Properties like width (as mentioned earlier), margin, padding, and border are not inherited properties. If a border were to be inherited by the children in this list example, every single list and list item would gain a border — probably not an effect we would ever want!<br><br>
+
+Though every CSS property page lists whether or not the property is inherited, you can often guess the same intuitively if you know what aspect the property value will style.<br><br>
+
+
+## Controlling inheritance
+CSS provides five special universal property values for controlling inheritance. Every CSS property accepts these values. `inherit` `initial` `revert` `revert-layer`  `unset`
+
+1. inherit
+Sets the property value applied to a selected element to be the same as that of its parent element. Effectively, this "turns on inheritance".<br>
+ ```css
+  .parent {
+    color: blue;
+  }
+
+  .child {
+    color: inherit; /* This will make the text color of .child blue, inherited from .parent */
+  }
+```
+
+2. initial
+Sets the property value applied to a selected element to the initial value of that property.<br><br>
+
+```css
+.example {
+  color: red; /* Red color */
+}
+
+.reset {
+  color: initial; /* This will reset the color to the default value defined by the CSS specification */
+}
+
+```
+
+3. revert
+Resets the property value applied to a selected element to the browser's default styling rather than the defaults applied to that property. This value acts like unset in many cases.<br><br>
+
+```css
+.example {
+  color: green; /* Green color */
+}
+
+.revert {
+  color: revert; /* This will revert the color to the browser's default value */
+}
+```
+
+4. revert-layer
+Resets the property value applied to a selected element to the value established in a previous cascade layer.<br><br>
+
+```css
+/* Assume multiple layers are used */
+.layer1 {
+  color: purple; /* Color defined in the first layer */
+}
+
+.layer2 {
+  color: revert-layer; /* This will use the color from the previous layer (layer1) */
+}
+```
+
+
+5. unset
+Resets the property to its natural value, which means that if the property is naturally inherited it acts like inherit, otherwise it acts like initial.<br><br>
+
+```css
+.example {
+  color: black; /* Black color */
+}
+
+.unset {
+  color: unset; /* This will either inherit the color from the parent if the property is inherited, or use the initial value */
+}
+```
+
+### Example
+1. The second list item has the class `my-class-1` applied. This sets the color of the `<a>` element nested inside to `inherit`. If you remove the rule, how does it change the color of the link?
+
+2. Do you understand why the third and fourth links are the color that they are? The third link is set to `initial`, which means it uses the initial value of the property (in this case black) and not the browser default for links, which is blue. The fourth link is set to `unset`, which means that the link text uses the color of the parent element, green.
+
+3. Which of the links will change color if you define a new color for the `<a>` element — for example `a { color: red; }`?
+
+4. After reading the next section on resetting all properties, come back and change the color property to `all`. Notice how the second link is on a new line and has a bullet. What properties do you think were inherited?
+
+![](/Apna-College/1-MDN/images/inheritence-example.png)
+
+```css
+body {
+  color: green;
+}
+
+.my-class-1 a {
+  color: inherit;
+}
+
+.my-class-2 a {
+  color: initial;
+}
+
+.my-class-3 a {
+  color: unset;
+}
+```
+
+
+
+```html
+<ul>
+  <li>Default <a href="#">link</a> color</li>
+  <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+  <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+  <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+</ul>
+```
+
+
