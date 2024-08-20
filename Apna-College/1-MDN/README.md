@@ -1,53 +1,55 @@
+
 # CSS and HTML Reference
 
 ## Table of Contents
 
-1. [Void Elements](#void-elements)
-2. [Boolean Attributes](#boolean-attributes)
-3. [The `<head>` Element](#the-head-element)
-4. [Adding a Title](#adding-a-title)
-5. [Document Fragments](#document-fragments)
-6. [Download Attribute](#download-attribute)
-7. [Navigation Menu](#navigation-menu)
-8. [HTML for Structuring Content](#html-for-structuring-content)
-9. [HTML Elements Reference](#html-elements-reference)
-10. [Non-Semantic Wrappers](#non-semantic-wrappers)
-11. [HTML Validation](#html-validation)
-12. [Exercise](#exercise)
-13. [CSS Specifications](#css-specifications)
-14. [Link and Visited States](#link-and-visited-states)
-15. [Combinators](#combinators)
-16. [The `href` Attribute](#the-href-attribute)
-17. [Valid Selectors](#valid-selectors)
-18. [CSS Declarations](#css-declarations)
-19. [Using `calc()` Function](#using-calc-function)
-20. [Transform Functions](#transform-functions)
-21. [CSS Rules](#css-rules)
-22. [Shorthand Properties](#shorthand-properties)
-23. [Types of Selectors](#types-of-selectors)
-24. [Attribute Selectors](#attribute-selectors)
-25. [Pseudo-Classes and Pseudo-Elements](#pseudo-classes-and-pseudo-elements)
-26. [The Universal Selector](#the-universal-selector)
-27. [Selectors and Combinators](#selectors-and-combinators)
-28. [Targeting Classes on Particular Elements](#targeting-classes-on-particular-elements)
-29. [Targeting Elements with Multiple Classes](#targeting-elements-with-multiple-classes)
-30. [ID Selectors](#id-selectors)
-31. [Attribute Selectors](#attribute-selectors)
-32. [Pseudo-Classes](#pseudo-classes)
-33. [User-Action Pseudo-Classes](#user-action-pseudo-classes)
-34. [Pseudo-Elements](#pseudo-elements)
-35. [Combining Pseudo-Classes and Pseudo-Elements](#combining-pseudo-classes-and-pseudo-elements)
-36. [Generating Content with `::before` and `::after`](#generating-content-with-before-and-after)
-37. [Combinators](#combinators)
-38. [Descendant combinator](#descendant-combinator)
-39. [Child combinator](#child-combinator)
-40. [Next-sibling combinator](#next-sibling-combinator)
-41. [Subsequent-sibling combinator](#subsequent-sibling-combinator)
-42. [Creating complex selectors with nesting](#creating-complex-selectors-with-nesting)
+1. [Void Elements](#1-void-elements)
+2. [Boolean Attributes](#2-boolean-attributes)
+3. [The `<head>` Element](#3-the-head-element)
+4. [Adding a Title](#4-adding-a-title)
+5. [Document Fragments](#5-document-fragments)
+6. [Download Attribute](#6-download-attribute)
+7. [Navigation Menu](#7-navigation-menu)
+8. [HTML for Structuring Content](#8-html-for-structuring-content)
+9. [HTML Elements Reference](#9-html-elements-reference)
+10. [Non-Semantic Wrappers](#10-non-semantic-wrappers)
+11. [HTML Validation](#11-html-validation)
+12. [Exercise](#12-exercise)
+13. [CSS Specifications](#13-css-specifications)
+14. [Link and Visited States](#14-link-and-visited-states)
+15. [Combinators](#15-combinators)
+16. [The `href` Attribute](#16-the-href-attribute)
+17. [Valid Selectors](#17-valid-selectors)
+18. [CSS Declarations](#18-css-declarations)
+19. [Using `calc()` Function](#19-using-calc-function)
+20. [Transform Functions](#20-transform-functions)
+21. [CSS Rules](#21-css-rules)
+22. [Shorthand Properties](#22-shorthand-properties)
+23. [Types of Selectors](#23-types-of-selectors)
+24. [Attribute Selectors](#24-attribute-selectors)
+25. [Presence Selector](#25-presence-selector)
+25. [Substring Matching Selectors](#26-substring-matching-selectors)
+27. [Pseudo-Classes and Pseudo-Elements](#27-pseudo-classes-and-pseudo-elements)
+28. [The Universal Selector](#28-the-universal-selector)
+29. [Selectors and Combinators](#29-selectors-and-combinators)
+30. [Targeting Classes on Particular Elements](#30-targeting-classes-on-particular-elements)
+31. [Targeting Elements with Multiple Classes](#31-targeting-elements-with-multiple-classes)
+32. [ID Selectors](#32-id-selectors)
+33. [Pseudo-Classes](#33-pseudo-classes)
+34. [User-Action Pseudo-Classes](#34-user-action-pseudo-classes)
+35. [Pseudo-Elements](#35-pseudo-elements)
+36. [Combining Pseudo-Classes and Pseudo-Elements](#36-combining-pseudo-classes-and-pseudo-elements)
+37. [Generating Content with `::before` and `::after`](#37-generating-content-with-before-and-after)
+38. [Descendant Combinator](#38-descendant-combinator)
+39. [Child Combinator](#39-child-combinator)
+40. [Next-Sibling Combinator](#40-next-sibling-combinator)
+41. [Subsequent-Sibling Combinator](#41-subsequent-sibling-combinator)
+42. [Creating Complex Selectors with Nesting](#42-creating-complex-selectors-with-nesting)
+
 
 ---
 
-## Void Elements
+## 1 Void Elements
 
 Void elements, also known as self-closing elements, do not have closing tags. Examples include:
 
@@ -55,7 +57,7 @@ Void elements, also known as self-closing elements, do not have closing tags. Ex
 - `<br>` (for line breaks)
 - `<hr>` (for horizontal rules)
 
-## Boolean Attributes
+## 2 Boolean Attributes
 
 Boolean attributes can be either present or absent. If present, they are treated as true. The attribute's value is typically the same as its name. Example:
 
@@ -65,7 +67,7 @@ Boolean attributes can be either present or absent. If present, they are treated
 
 In this example, the `checked` attribute is a boolean attribute. It indicates that the checkbox is selected when the page loads.
 
-## The `<head>` Element
+## 3 The `<head>` Element
 
 The `<head>` section of an HTML document contains metadata and links to resources like stylesheets and favicons. The content of `<head>` is not displayed on the page itself but provides information for rendering the page correctly. Examples of what you can include in the `<head>`:
 
@@ -82,7 +84,7 @@ The `<head>` section of an HTML document contains metadata and links to resource
 </head>
 ```
 
-## Adding a Title
+## 4 Adding a Title
 
 The `<h1>` element is used to mark up the main title of your page content. It is usually used once per page to represent the primary heading. For example:
 
@@ -90,7 +92,7 @@ The `<h1>` element is used to mark up the main title of your page content. It is
 <h1>Welcome to My Website</h1>
 ```
 
-## Document Fragments
+## 5 Document Fragments
 
 A document fragment is a way to link to a specific part of a page. This is done using the `id` attribute and a fragment identifier in the URL. Example:
 
@@ -102,7 +104,7 @@ A document fragment is a way to link to a specific part of a page. This is done 
 </p>
 ```
 
-## Download Attribute
+## 6 Download Attribute
 
 Use the `download` attribute on `<a>` elements to suggest a filename for the file being downloaded. This attribute can be used to trigger a file download when a link is clicked. Example:
 
@@ -110,7 +112,7 @@ Use the `download` attribute on `<a>` elements to suggest a filename for the fil
 <a href="https://example.com/file.zip" download="filename.zip">Download File</a>
 ```
 
-## Navigation Menu
+## 7 Navigation Menu
 
 A navigation menu is typically a list of links that help users navigate through different sections of a site. This can be structured with `<ul>` and `<li>` elements inside a `<nav>` element. Example:
 
@@ -124,7 +126,7 @@ A navigation menu is typically a list of links that help users navigate through 
 </nav>
 ```
 
-## HTML for Structuring Content
+## 8 HTML for Structuring Content
 
 Use semantic HTML elements to structure your content logically:
 
@@ -155,11 +157,11 @@ Use semantic HTML elements to structure your content logically:
 </footer>
 ```
 
-## HTML Elements Reference
+## 9 HTML Elements Reference
 
 For a detailed list of HTML elements, visit the [MDN HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-## Non-Semantic Wrappers
+## 10 Non-Semantic Wrappers
 
 When no semantic element is appropriate for grouping elements, use `<div>` and `<span>`. These elements help group content for styling or scripting purposes. Apply classes to make them easier to target with CSS or JavaScript.
 
@@ -169,22 +171,22 @@ When no semantic element is appropriate for grouping elements, use `<div>` and `
 </div>
 ```
 
-## HTML Validation
+## 11 HTML Validation
 
 To ensure your HTML is correct and follows standards, use the [W3C Markup Validation Service](https://validator.w3.org/). Validating your HTML helps catch errors and improve compatibility across browsers.
 
-## Exercise
+## 12 Exercise
 
 Practice your HTML skills with these exercises:
 
 [Marking up a Letter](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
 [Structuring a Page of Content](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
 
-## CSS Specifications
+## 13 CSS Specifications
 
 Explore CSS specifications to understand the latest features and best practices for styling web pages.
 
-## Link and Visited States
+## 14 Link and Visited States
 
 You can style links differently based on their state:
 
@@ -202,14 +204,14 @@ a:hover {
 }
 ```
 
-## Combinators
+## 15 Combinators
 
 CSS combinators define the relationship between selectors:
 
 - Descendant Combinator: article p span selects `<span>` inside `<p>` inside `<article>`.
 - Adjacent Sibling Combinator: `h1 + ul + p` selects `<p>` that immediately follows a `<ul>`, which follows an `<h1>`.
 
-## The href Attribute
+## 16 The href Attribute
 
 The href attribute specifies the path to a linked resource. Here are examples of different paths:
 
@@ -222,7 +224,7 @@ The href attribute specifies the path to a linked resource. Here are examples of
 <!-- Parent directory -->
 ```
 
-## Valid Selectors
+## 17 Valid Selectors
 
 Examples of valid CSS selectors:
 
@@ -235,7 +237,7 @@ Examples of valid CSS selectors:
 - `.box p:first-child` (selects the first `<p>` child of elements with class "box")
 - `h1, h2, .intro` (selects all `<h1>`, `<h2>`, and elements with class "intro")
 
-## CSS Declarations
+## 18 CSS Declarations
 
 A CSS declaration consists of a property and its value. Declarations are enclosed in curly braces {}. Example:
 
@@ -246,7 +248,7 @@ p {
 }
 ```
 
-## Using calc() Function
+## 19 Using calc() Function
 
 The `calc()` function allows for mathematical calculations in CSS. Example:
 
@@ -256,7 +258,7 @@ The `calc()` function allows for mathematical calculations in CSS. Example:
 }
 ```
 
-## Transform Functions
+## 20 Transform Functions
 
 Transform functions apply transformations to elements. Example:
 
@@ -266,7 +268,7 @@ Transform functions apply transformations to elements. Example:
 }
 ```
 
-## CSS Rules
+## 21 CSS Rules
 
 CSS rules include `@`-rules for special instructions. Examples:
 
@@ -283,7 +285,7 @@ CSS rules include `@`-rules for special instructions. Examples:
 }
 ```
 
-## Shorthand Properties
+## 22 Shorthand Properties
 
 Shorthand properties allow setting multiple values in one line. Examples include:
 
@@ -291,7 +293,7 @@ Shorthand properties allow setting multiple values in one line. Examples include
 - `margin: 5px 10px;` /_ Sets margin for top/bottom and right/left _/
 - `border: 1px solid black;` /_ Sets border width, style, and color _/
 
-## Types of Selectors
+## 23 Types of Selectors
 
 CSS selectors can be:
 
@@ -316,10 +318,24 @@ h1 {
 }
 ```
 
-## Attribute Selectors
+## 24 Attribute Selectors
 
 Attribute selectors target elements based on attributes:
 
+Attribute selectors target elements based on their attributes:
+
+```css
+a[title] {
+  color: blue; /* Applies to all <a> elements with a title attribute */
+}
+
+a[href^="https"] {
+  color: green; /* Applies to all <a> elements with href starting with "https" */
+}
+```
+
+
+## 25 Presence Selector
 - Presence Selector: Selects elements with a specific attribute.
 
 
@@ -329,6 +345,85 @@ Attribute selectors target elements based on attributes:
 |`[attr=value]`|`a[href="https://example.com"]`| Matches elements with an `attr` attribute whose value is exactly `value` — the string inside the quotes.|
 | `[attr~=value]`  | `p[class~="special"]`         | Matches elements with an `attr` attribute whose value is exactly `value`, or contains `value` in its (space-separated) list of values. | 
 |`[attr\|=value]`|`div[lang\|="zh"]`| Matches elements with an `attr` attribute whose value is exactly `value` or begins with `value` immediately followed by a hyphen. |
+
+In the example below you can see these selectors being used:
+
+- `li[class]` matches any list item with a class attribute. This matches all of the list items except the first one.
+- `li[class="a"]` matches a selector with a class of `a`, but not a selector with a class of `a` that includes another space-separated class as part of the value. It selects the second list item.
+- `li[class~="a"]` will match a class of `a` but also a value that contains `a` as part of a whitespace-separated list. It selects the second and third list items.
+
+![](/Apna-College/1-MDN/images/presence-selector.png)
+
+```css
+li[class] {
+  font-size: 200%;
+}
+
+li[class="a"] {
+  background-color: yellow;
+}
+
+li[class~="a"] {
+  color: red;
+}
+```
+
+```html
+<h1>Attribute presence and value selectors</h1>
+<ul>
+  <li>Item 1</li>
+    <li class="a">Item 2</li>
+    <li class="a b">Item 3</li>
+    <li class="ab">Item 4</li>
+</ul>
+```
+
+
+## 26 Substring Matching Selectors
+
+These selectors allow for more advanced matching of substrings inside the value of your attribute. For example, if you had classes of `box-warning` and `box-error` and wanted to match everything that started with the string `box-`, you could use `[class^="box-"]` to select them both (or `[class|="box"]` as described in the section above).
+
+| Selector         | Example               | Description                                                                                               |
+|------------------|-----------------------|-----------------------------------------------------------------------------------------------------------|
+| `[attr^=value]`  | `li[class^="box-"]`   | Matches elements with an `attr` attribute whose value begins with `value`.                               |
+| `[attr$=value]`  | `li[class$="-box"]`   | Matches elements with an `attr` attribute whose value ends with `value`.                                 |
+| `[attr*=value]`  | `li[class*="box"]`    | Matches elements with an `attr` attribute whose value contains `value` anywhere within the string.        |
+
+(Aside: It may help to note that `^` and `$` have long been used as anchors in so-called regular expressions to mean "begins with" and "ends with" respectively.)
+
+### Example Usage
+
+- `li[class^="a"]` matches any attribute value which starts with `a`, so it matches the first two list items.
+- `li[class$="a"]` matches any attribute value that ends with `a`, so it matches the first and third list items.
+- `li[class*="a"]` matches any attribute value where `a` appears anywhere in the string, so it matches all of the list items.
+
+![](/Apna-College/1-MDN/images/substring-matching.png)
+
+```css
+li[class^="a"] {
+  font-size: 200%;
+}
+
+li[class$="a"] {
+  background-color: yellow;
+}
+
+li[class*="a"] {
+  color: red;
+}
+```
+
+```html
+<h1>Attribute substring matching selectors</h1>
+<ul>
+  <li class="a">Item 1</li>
+  <li class="ab">Item 2</li>
+  <li class="bca">Item 3</li>
+  <li class="bcabc">Item 4</li>
+</ul>
+```
+
+
 
 ```css
 a[title] {
@@ -342,7 +437,7 @@ a[title] {
 Value Selector: Selects elements with a specific attribute value.
 ```
 
-## Pseudo-Classes and Pseudo-Elements
+## 27 Pseudo-Classes and Pseudo-Elements
 
 - **Pseudo-Classes**: Apply styles based on element states, e.g., `:hover`.
 
@@ -360,7 +455,7 @@ p::first-line {
 }
 ```
 
-## The Universal Selector
+## 28 The Universal Selector
 
 The universal selector `*` targets all elements on a page. For example:
 
@@ -370,7 +465,7 @@ The universal selector `*` targets all elements on a page. For example:
 }
 ```
 
-## Selectors and Combinators
+## 29 Selectors and Combinators
 
 Selectors combined with combinators allow more precise targeting of elements:
 
@@ -390,7 +485,7 @@ h1 + p {
 }
 ```
 
-## Targeting Classes on Particular Elements
+## 30 Targeting Classes on Particular Elements
 
 Apply styles to elements with specific classes:
 
@@ -404,7 +499,7 @@ span.highlight {
 }
 ```
 
-## Targeting Elements with Multiple Classes
+## 31 Targeting Elements with Multiple Classes
 
 Style elements with multiple classes by combining class selectors:
 
@@ -422,7 +517,7 @@ Style elements with multiple classes by combining class selectors:
 }
 ```
 
-## ID Selectors
+## 32ID Selectors
 
 ID selectors target unique elements identified by their ID attribute:
 
@@ -436,21 +531,8 @@ h1#heading {
 }
 ```
 
-## Attribute Selectors
 
-Attribute selectors target elements based on their attributes:
-
-```css
-a[title] {
-  color: blue; /* Applies to all <a> elements with a title attribute */
-}
-
-a[href^="https"] {
-  color: green; /* Applies to all <a> elements with href starting with "https" */
-}
-```
-
-## Pseudo-Classes
+## 33 Pseudo-Classes
 
 Pseudo-classes style elements based on their state:
 
@@ -464,7 +546,7 @@ input:focus {
 }
 ```
 
-## User-Action Pseudo-Classes
+## 34 User-Action Pseudo-Classes
 
 These pseudo-classes apply styles based on user actions:
 
@@ -478,7 +560,7 @@ input:checked {
 }
 ```
 
-## Pseudo-Elements
+## 35 Pseudo-Elements
 
 Pseudo-elements style specific parts of an element:
 
@@ -492,7 +574,7 @@ p::first-letter {
 }
 ```
 
-## Combining Pseudo-Classes and Pseudo-Elements
+## 36 Combining Pseudo-Classes and Pseudo-Elements
 
 You can combine pseudo-classes and pseudo-elements to target more specific states and parts:
 
@@ -506,7 +588,7 @@ p:first-child::before {
 }
 ```
 
-## Generating Content with `::before` and `::after`
+## 37 Generating Content with `::before` and `::after`
 
 Use `::before` and `::after` to insert content before or after an element's actual content:
 
@@ -524,7 +606,7 @@ Use `::before` and `::after` to insert content before or after an element's actu
 
 The final selectors we will look at are called combinators, because they combine other selectors in a way that gives them a useful relationship to each other and the location of content in the document.
 
-## Descendant combinator
+## 38 Descendant combinator
 
 The descendant combinator — typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called descendant selectors.
 
@@ -545,7 +627,7 @@ Example:
 <p>Text not in .box</p>
 ```
 
-## Child combinator
+## 39 Child combinator
 
 The child combinator (>) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first. Descendant elements further down the hierarchy don't match. For example, to select only `<p>` elements that are direct children of `<article>` elements:
 
@@ -578,7 +660,7 @@ ul > li {
 </ul>
 ```
 
-## Next-sibling combinator
+## 40 Next-sibling combinator
 
 The next-sibling combinator (+) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
 
@@ -617,7 +699,7 @@ h1 + p {
 </article>
 ```
 
-## Subsequent-sibling combinator
+## 41 Subsequent-sibling combinator
 
 If you want to select siblings of an element even if they are not directly adjacent, then you can use the subsequent-sibling combinator (~). To select all `<img>` elements that come anywhere after `<p>` elements, we'd do this:
 
@@ -647,6 +729,6 @@ h1 ~ p {
 </article>
 ```
 
-## Creating complex selectors with nesting
+## 42 Creating complex selectors with nesting
 
 [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators#creating_complex_selectors_with_nesting)
