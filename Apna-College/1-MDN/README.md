@@ -75,3 +75,76 @@ The `<head>` section of an HTML document contains metadata and links to resource
   <meta name="description" content="A description of the page" />
 </head>
 ```
+
+## Adding a Title
+
+The `<h1>` element is used to mark up the main title of your page content. It is usually used once per page to represent the primary heading. For example:
+
+```html
+<h1>Welcome to My Website</h1>
+```
+
+## Document Fragments
+
+A document fragment is a way to link to a specific part of a page. This is done using the `id` attribute and a fragment identifier in the URL. Example:
+
+```html
+<h2 id="Mailing_address">Mailing Address</h2>
+<p>
+  Want to write us a letter? Use our
+  <a href="contacts.html#Mailing_address">mailing address</a>.
+</p>
+```
+
+## Download Attribute
+
+Use the `download` attribute on `<a>` elements to suggest a filename for the file being downloaded. This attribute can be used to trigger a file download when a link is clicked. Example:
+
+```html
+<a href="https://example.com/file.zip" download="filename.zip">Download File</a>
+```
+
+## Navigation Menu
+
+A navigation menu is typically a list of links that help users navigate through different sections of a site. This can be structured with `<ul>` and `<li>` elements inside a `<nav>` element. Example:
+
+```html
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+```
+
+## HTML for Structuring Content
+
+Use semantic HTML elements to structure your content logically:
+
+- Header: `<header>` for introductory content or navigational links.
+- Navigation Bar: `<nav>` for navigation links.
+- Main Content: `<main>` for the primary content, with `<article>`, `<section>`, and `<div>` for further division.
+- Sidebar: `<aside>` for related content, often placed inside `<main>`.
+- Footer: `<footer>` for footer content.
+
+```html
+<header>
+  <h1>Page Title</h1>
+</header>
+<nav>
+  <!-- Navigation links -->
+</nav>
+<main>
+  <article>
+    <h2>Article Title</h2>
+    <p>Article content...</p>
+  </article>
+  <aside>
+    <p>Related content...</p>
+  </aside>
+</main>
+<footer>
+  <p>Footer content...</p>
+</footer>
+```
