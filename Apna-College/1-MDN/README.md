@@ -195,3 +195,313 @@ a:hover {
   text-decoration: none; /* Links when hovered */
 }
 ```
+
+## Combinators
+
+CSS combinators define the relationship between selectors:
+
+- Descendant Combinator: article p span selects `<span>` inside `<p>` inside `<article>`.
+- Adjacent Sibling Combinator: `h1 + ul + p` selects `<p>` that immediately follows a `<ul>`, which follows an `<h1>`.
+
+## The href Attribute
+
+The href attribute specifies the path to a linked resource. Here are examples of different paths:
+
+```html
+<link rel="stylesheet" href="styles/style.css" />
+<!-- Same directory -->
+<link rel="stylesheet" href="styles/general/style.css" />
+<!-- Subdirectory -->
+<link rel="stylesheet" href="../styles/style.css" />
+<!-- Parent directory -->
+```
+
+## Valid Selectors
+
+Examples of valid CSS selectors:
+
+- `h1` (selects all `<h1>` elements)
+- `a:link` (selects all unvisited links)
+- `.manythings` (selects all elements with class "manythings")
+- `#onething` (selects the element with ID "onething")
+- `*` (universal selector, selects all elements)
+- `.box p` (selects all `<p>` elements inside an element with class "box")
+- `.box p:first-child` (selects the first `<p>` child of elements with class "box")
+- `h1, h2, .intro` (selects all `<h1>`, `<h2>`, and elements with class "intro")
+
+## CSS Declarations
+
+A CSS declaration consists of a property and its value. Declarations are enclosed in curly braces {}. Example:
+
+```css
+p {
+  color: red; /* Property: color, Value: red */
+  font-size: 16px; /* Property: font-size, Value: 16px */
+}
+```
+
+## Using calc() Function
+
+The `calc()` function allows for mathematical calculations in CSS. Example:
+
+```css
+.box {
+  width: calc(90% - 30px); /* Width is 90% of the container minus 30 pixels */
+}
+```
+
+## Transform Functions
+
+Transform functions apply transformations to elements. Example:
+
+```css
+.box {
+  transform: rotate(0.8turn); /* Rotate the element by 0.8 turns */
+}
+```
+
+## CSS Rules
+
+CSS rules include `@`-rules for special instructions. Examples:
+
+- `@import`: Imports another stylesheet.
+- `@media`: Creates media queries for responsive design.
+
+```css
+@import "styles2.css"; /* Imports styles from another stylesheet */
+
+@media (max-width: 600px) {
+  .box {
+    width: 100%; /* Styles for screens smaller than 600px */
+  }
+}
+```
+
+## Shorthand Properties
+
+Shorthand properties allow setting multiple values in one line. Examples include:
+
+- `padding: 10px 15px 20px;` /_ Sets padding for top, right, bottom, and left _/
+- `margin: 5px 10px;` /_ Sets margin for top/bottom and right/left _/
+- `border: 1px solid black;` /_ Sets border width, style, and color _/
+
+## Types of Selectors
+
+CSS selectors can be:
+
+- **Type Selector**: Selects elements by their tag name.
+- **Class Selector**: Selects elements by their class name.
+- **ID Selector**: Selects an element by its ID.
+
+```css
+h1 {
+  /* Type selector */
+  color: blue;
+}
+
+.highlight {
+  /* Class selector */
+  background-color: yellow;
+}
+
+#unique {
+  /* ID selector */
+  font-size: 20px;
+}
+```
+
+## Attribute Selectors
+
+Attribute selectors target elements based on attributes:
+
+- Presence Selector: Selects elements with a specific attribute.
+
+```css
+a[title] {
+  color: blue;
+}
+```
+
+- Value Selector: Selects elements with a specific attribute value.
+
+```css
+Value Selector: Selects elements with a specific attribute value.
+```
+
+## Pseudo-Classes and Pseudo-Elements
+
+- **Pseudo-Classes**: Apply styles based on element states, e.g., `:hover`.
+
+```css
+a:hover {
+  color: orange; /* Styles for links when hovered */
+}
+```
+
+- **Pseudo-Elements**: Style specific parts of an element, e.g., `::first-line`.
+
+```css
+p::first-line {
+  font-weight: bold; /* Styles the first line of paragraphs */
+}
+```
+
+## The Universal Selector
+
+The universal selector `*` targets all elements on a page. For example:
+
+```css
+* {
+  box-sizing: border-box; /* Applies box-sizing to all elements */
+}
+```
+
+## Selectors and Combinators
+
+Selectors combined with combinators allow more precise targeting of elements:
+
+- **Descendant Combinator**: Selects elements nested inside other elements.
+
+```css
+article p {
+  color: blue; /* Selects <p> elements inside <article> */
+}
+```
+
+- **Adjacent Sibling Combinator**: Selects elements directly following other elements.
+
+```css
+h1 + p {
+  margin-top: 0; /* Selects <p> that immediately follows an <h1> */
+}
+```
+
+## Targeting Classes on Particular Elements
+
+Apply styles to elements with specific classes:
+
+```css
+h1.highlight {
+  background-color: pink; /* Applies to <h1> elements with class "highlight" */
+}
+
+span.highlight {
+  background-color: yellow; /* Applies to <span> elements with class "highlight" */
+}
+```
+
+## Targeting Elements with Multiple Classes
+
+Style elements with multiple classes by combining class selectors:
+
+```css
+.notebox {
+  border: 4px solid #666; /* Base style for .notebox */
+}
+
+.notebox.warning {
+  border-color: orange; /* Style for .notebox with additional "warning" class */
+}
+
+.notebox.danger {
+  border-color: red; /* Style for .notebox with additional "danger" class */
+}
+```
+
+## ID Selectors
+
+ID selectors target unique elements identified by their ID attribute:
+
+```css
+#one {
+  background-color: yellow; /* Applies to element with ID "one" */
+}
+
+h1#heading {
+  color: rebeccapurple; /* Applies to <h1> element with ID "heading" */
+}
+```
+
+## Attribute Selectors
+
+Attribute selectors target elements based on their attributes:
+
+```css
+a[title] {
+  color: blue; /* Applies to all <a> elements with a title attribute */
+}
+
+a[href^="https"] {
+  color: green; /* Applies to all <a> elements with href starting with "https" */
+}
+```
+
+## Pseudo-Classes
+
+Pseudo-classes style elements based on their state:
+
+```css
+a:hover {
+  text-decoration: underline; /* Applies when the mouse is over the link */
+}
+
+input:focus {
+  border-color: blue; /* Applies when the input field is focused */
+}
+```
+
+## User-Action Pseudo-Classes
+
+These pseudo-classes apply styles based on user actions:
+
+```css
+button:active {
+  background-color: grey; /* Styles button when it is pressed */
+}
+
+input:checked {
+  background-color: green; /* Styles checkbox when checked */
+}
+```
+
+## Pseudo-Elements
+
+Pseudo-elements style specific parts of an element:
+
+```css
+p::first-line {
+  font-weight: bold; /* Styles the first line of <p> elements */
+}
+
+p::first-letter {
+  font-size: 2em; /* Styles the first letter of <p> elements */
+}
+```
+
+## Combining Pseudo-Classes and Pseudo-Elements
+
+You can combine pseudo-classes and pseudo-elements to target more specific states and parts:
+
+```css
+a:hover::after {
+  content: " (hovered)"; /* Adds text after links when hovered */
+}
+
+p:first-child::before {
+  content: "Note: "; /* Adds text before the first <p> child */
+}
+```
+
+## Generating Content with `::before` and `::after`
+
+Use `::before` and `::after` to insert content before or after an element's actual content:
+
+```css
+.box::before {
+  content: "Start - "; /* Adds "Start - " before the content of .box */
+}
+
+.box::after {
+  content: " - End"; /* Adds " - End" after the content of .box */
+}
+```
