@@ -38,6 +38,12 @@
 34. [Pseudo-Elements](#pseudo-elements)
 35. [Combining Pseudo-Classes and Pseudo-Elements](#combining-pseudo-classes-and-pseudo-elements)
 36. [Generating Content with `::before` and `::after`](#generating-content-with-before-and-after)
+37. [Combinators](#combinators)
+38. [Descendant combinator](#descendant-combinator)
+39. [Child combinator](#child-combinator)
+40. [Next-sibling combinator](#next-sibling-combinator)
+41. [Subsequent-sibling combinator](#subsequent-sibling-combinator)
+42. [Creating complex selectors with nesting](#creating-complex-selectors-with-nesting)
 
 ---
 
@@ -505,8 +511,6 @@ Use `::before` and `::after` to insert content before or after an element's actu
   content: " - End"; /* Adds " - End" after the content of .box */
 }
 ```
-
----
 
 ## Combinators [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
