@@ -322,6 +322,14 @@ Attribute selectors target elements based on attributes:
 
 - Presence Selector: Selects elements with a specific attribute.
 
+
+| Selector         | Example                       | Description                                                                                     |
+|------------------|-------------------------------|-------------------------------------------------------------------------------------------------|
+| `[attr]`         | `a[title]`                    | Matches elements with an `attr` attribute (whose name is the value in square brackets).|
+|`[attr=value]`|`a[href="https://example.com"]`| Matches elements with an `attr` attribute whose value is exactly `value` — the string inside the quotes.|
+| `[attr~=value]`  | `p[class~="special"]`         | Matches elements with an `attr` attribute whose value is exactly `value`, or contains `value` in its (space-separated) list of values. | 
+|`[attr\|=value]`|`div[lang\|="zh"]`| Matches elements with an `attr` attribute whose value is exactly `value` or begins with `value` immediately followed by a hyphen. |
+
 ```css
 a[title] {
   color: blue;
