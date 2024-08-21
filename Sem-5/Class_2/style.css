@@ -2,6 +2,8 @@
 
     /* display: inline-block; */
     /* text-align: center; */
+    display: flex;
+
 
 }
 
@@ -12,7 +14,7 @@
     border: 1px black solid;
     background-color: antiquewhite;
     border-radius: 10px;
-
+    margin: 20px;
 }
 
 .main1:hover {
@@ -21,10 +23,17 @@
 }
 
 
-div>div {
+/* div>div {
     display: inline-block;
     margin: 20px;
+} */
+.labels,
+.values {
+    display: inline-block;
+    margin: 20px;
+
 }
+
 
 .labels>p {
     border: 1px black solid;
