@@ -1,0 +1,4 @@
+biodata
+selectors: tag, class, id
+image tag
+embed tag

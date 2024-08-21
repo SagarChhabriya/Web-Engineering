@@ -962,4 +962,142 @@ body {
 </ul>
 ```
 
+## Resetting all property values
+
+The CSS shorthand property `all` can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.<br><br>
+
+In the example below, we have two blockquotes. The first has styling applied to the `blockquote` element itself. The second has a class applied to the `blockquote`, which sets the value of `all` to `unset`.<br><br>
+
+![](/Apna-College/1-MDN/images/inheritence-resetting.png)
+
+```css
+blockquote {
+  background-color: orange;
+  border: 2px solid blue;
+}
+
+.fix-this {
+  all: unset;
+}
+```
+
+```html
+<blockquote>
+  <p>This blockquote is styled</p>
+</blockquote>
+
+<blockquote class="fix-this">
+  <p>This blockquote is not styled</p>
+</blockquote>
+```
+
+
+## Understanding the cascade
+There are three factors to consider, listed here in increasing order of importance. Later ones overrule earlier ones:
+
+1. Source order
+2. Specificity
+3. Importance
+
+We have already seen how source order matters to the cascade. If you have more than one rule, all of which have exactly the same weight, then the one that comes last in the CSS will win. You can think of this as: the rule that is nearer the element itself overwrites the earlier ones until the last one wins and gets to style the element.<br><br>
+
+Source order only matters when the specificity weight of the rules is the same, so let's look at specificity:<br><br>
+
+### Specificity
+You will often run into a situation where you know that a rule comes later in the stylesheet, but an earlier, conflicting rule is applied. This happens because the earlier rule has a higher specificity — it is more specific, and therefore, is being chosen by the browser as the one that should style the element.<br><br>
+
+`Note`: The universal selector (*), combinators (+, >, ~, ' '), and specificity adjustment selector (:where()) along with its parameters, have no effect on specificity.<br><br>
+
+The negation (:not()), relational selector (:has()), the matches-any (:is()) pseudo-classes, and CSS nesting themselves don't add to specificity, but their parameters or nested rules do. The specificity weight that each contributes to the specificity algorithm is the specificity weight of the selector in the parameter or nested rule with the greatest weight.<br><br>
+
+The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. We've not covered selectors in detail yet, but you can find details of each selector on the MDN selectors reference.<br><br>
+
+| Selector | Identifiers | Classes | Elements | Total specifity|
+|----------|-------------|---------|----------|----------------|
+|h1	| 0	| 0 |	1 |	0-0-1|
+|h1 + p::first-letter	| 0 |	0 |	3	| 0-0-3|
+|li > a[href*="en-US"] > .inline-warning|	0 |	2 |	2	| 0-2-2|
+| #identifier	| 1 |	0 |	0 |	1-0-0|
+|button:not(#mainBtn, .cta)|	1	| 0	| 1 |	1-0-1|
+
+### Example
+```css
+
+/* 1. specificity: 1-0-1 */
+#outer a {
+  background-color: red;
+}
+
+/* 2. specificity: 2-0-1 */
+#outer #inner a {
+  background-color: blue;
+}
+
+/* 3. specificity: 1-0-4 */
+#outer div ul li a {
+  color: yellow;
+}
+
+/* 4. specificity: 1-1-3 */
+#outer div ul .nav a {
+  color: white;
+}
+
+/* 5. specificity: 0-2-4 */
+div div li:nth-child(2) a:hover {
+  border: 10px solid black;
+}
+
+/* 6. specificity: 0-2-3 */
+div li:nth-child(2) a:hover {
+  border: 10px dashed black;
+}
+
+/* 7. specificity: 0-3-3 */
+div div .nav:nth-child(2) a:hover {
+  border: 10px double black;
+}
+
+a {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+```
+
+
+```html
+<div id="outer" class="container">
+  <div id="inner" class="container">
+    <ul>
+      <li class="nav"><a href="#">One</a></li>
+      <li class="nav"><a href="#">Two</a></li>
+    </ul>
+  </div>
+</div>
+```
+
+- The first two selectors are competing over the styling of the link's background color. The second one wins and makes the background color blue because it has an extra ID selector in the chain: its specificity is 2-0-1 vs. 1-0-1.
+
+- Selectors 3 and 4 are competing over the styling of the link's text color. The second one wins and makes the text white because although it has one less element selector, the missing selector is swapped out for a class selector, which has more weight than infinity element selectors. The winning specificity is 1-1-3 vs. 1-0-4.
+
+- Selectors 5–7 are competing over the styling of the link's border when hovered. Selector 6 clearly loses to selector 5 with a specificity of 0-2-3 vs. 0-2-4; it has one fewer element selectors in the chain. Selector 7, however, beats both selectors 5 and 6 because it has the same number of sub-selectors in the chain as selector 5, but an element has been swapped out for a class selector. So the winning specificity is 0-3-3 vs. 0-2-3 and 0-2-4.
+
+## Inline styles
+Inline styles, that is, the style declaration inside a style attribute, take precedence over all normal styles, no matter the specificity. Such declarations don't have selectors, but their specificity can be construed as 1-0-0-0; always more than any other specificity weight no matter how many IDs are in the selectors.<br><br>
+
+## !important
+There is a special piece of CSS that you can use to overrule all of the above calculations, even inline styles - the !important flag. However, you should be very careful while using it. This flag is used to make an individual property and value pair the most specific rule, thereby overriding the normal rules of the cascade, including normal inline styles.<br><br>
 
