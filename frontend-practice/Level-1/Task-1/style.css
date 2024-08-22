@@ -1,0 +1,175 @@
+body {
+    font-family: 'GT America Standard', sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* style for the header div */
+.header {
+
+    height: 90px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.abstract {
+    color: #fff;
+    align-self: center;
+    padding-left: 4%;
+    font-size: 25px;
+
+}
+
+.btn {
+    /* text-align: left; */
+    align-self: center;
+    padding-right: 6%;
+
+
+}
+
+
+.submit {
+    color: #fff;
+    background-color: #100000;
+    border: 1px solid white;
+    padding: 10px;
+    margin-right: 15px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+
+.signin {
+    background-color: #4C5FD5;
+    padding: 10px 30px;
+    font-size: 25px;
+    color: #fff;
+    border-radius: 10px;
+
+}
+
+.signin:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s ease-in-out;
+
+}
+
+.search-div {
+
+    height: 400px;
+    width: 100%;
+    background-color: #dadbf1;
+    text-align: center;
+    /* padding-top: 50px; */
+    font-size: 3em;
+    border: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-div>p {
+    margin-top: 5%;
+
+}
+
+.search-input {
+    height: 60px;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.search-input:hover {
+    border-color: #4C5FD5;
+
+}
+
+
+/* Style for placeholder text */
+.search-input::placeholder {
+    color: #888;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+/* styling for the main tag */
+.item {
+    background-color: #fff;
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    /* align the items center horizontally + vertically */
+    align-content: center;
+    justify-content: space-around;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6 {
+    /* border: 1px solid black; */
+    margin: 10px;
+    height: 200px;
+    width: 32%;
+    font-size: 25px;
+
+}
+
+/* bold the p tags of the main div */
+.topic {
+    font-weight: bold;
+}
+
+.description {
+    color: #3b3838;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    height: 400px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.footer1,
+.footer2,
+.footer3,
+.footer4 {
+    margin-top: 15px;
+
+}
+
+.footer1 a,
+.footer2 a,
+.footer3 a,
+.footer4 a {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    line-height: 25px;
+}
