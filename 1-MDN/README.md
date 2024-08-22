@@ -1101,3 +1101,8 @@ Inline styles, that is, the style declaration inside a style attribute, take pre
 ## !important
 There is a special piece of CSS that you can use to overrule all of the above calculations, even inline styles - the !important flag. However, you should be very careful while using it. This flag is used to make an individual property and value pair the most specific rule, thereby overriding the normal rules of the cascade, including normal inline styles.<br><br>
 
+# The box model
+Everything in CSS has a box around it, and understanding these boxes is key to being able to create more complex layouts with CSS, or to align items with other items. In this lesson, we will take a look at the CSS Box Model. You'll get an understanding of how it works and the terminology that relates to it.<br><br>
+
+
+
