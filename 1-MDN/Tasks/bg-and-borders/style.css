@@ -1,0 +1,50 @@
+/* styles.css */
+
+body {
+    margin: 5;
+    font-family: Arial, sans-serif;
+    /* Optional: sets a default font */
+}
+
+.page-header {
+    width: 70%;
+    /* Full width of the container */
+    height: 200px;
+    /* Adjust height as needed */
+    border: 5px solid black;
+    /* 5px black solid border */
+    border-radius: 10px;
+    /* Rounded corners with 10px radius */
+    background: url('/1-MDN/assets/ballons.png');
+    /* background: url('/1-MDN/assets/ballons.png') no-repeat center center; */
+    /* Background image */
+    background-size: cover;
+    /* Cover the box completely */
+    display: flex;
+    /* Use flexbox to center the heading */
+    align-items: center;
+    /* Center the heading vertically */
+    justify-content: center;
+    /* Center the heading horizontally */
+    position: relative;
+    /* For possible future positioning of the heading */
+    color: white;
+    /* Ensure text color is white */
+}
+
+.page-header h2 {
+    margin: 0;
+    /* Remove default margin */
+    padding: 10px;
+    /* Add padding around the text */
+    font-size: 24px;
+    /* Adjust font size as needed */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black background */
+    color: white;
+    /* White text color */
+    border-radius: 5px;
+    /* Optional: rounded corners for the heading */
+    width: 800px;
+    text-align: center;
+}
