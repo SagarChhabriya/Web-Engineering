@@ -1262,15 +1262,13 @@ The `background-position` property allows you to choose the position in which th
 
 `Note`: The default `background-position` value is `(0,0)`.
 
-<div>
+<div >
   <img src="./assets/bg-4.png" height="250px">
+  <img src="./assets/bg-5.png" height="250px">
+  <img src="./assets/bg-6.png" height="250px">
+  <img src="./assets/bg-7.png" height="250px">
+  <img src="./assets/bg-8.png" height="250px">
+  <img src="./assets/bg-9.png" height="250px">
 </div>
-<!-- 
-![](./assets/bg-4.png)
-![](./assets/bg-5.png)
-![](./assets/bg-6.png)
-![](./assets/bg-7.png)
-![](./assets/bg-8.png)
-![](./assets/bg-9.png) -->
 
 `Note`: `background-position` is a shorthand for `background-position-x` and `background-position-y`, which allow you to set the different axis position values individually.
