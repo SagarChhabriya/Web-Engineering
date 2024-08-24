@@ -1272,3 +1272,36 @@ The `background-position` property allows you to choose the position in which th
 </div>
 
 `Note`: `background-position` is a shorthand for `background-position-x` and `background-position-y`, which allow you to set the different axis position values individually.
+
+## Multiple background images
+It is also possible to have multiple background images — you specify multiple background-image values in a single property value, separating each one with a comma.<br>
+
+When you do this you may end up with background images overlapping each other. The backgrounds will layer with the last listed background image at the bottom of the stack, and each previous image stacking on top of the one that follows it in the code.<br>
+
+`The other background-* properties can also have comma-separated values in the same way as background-image:`
+
+```css
+background-image: url(image1.png), url(image2.png), url(image3.png),
+  url(image4.png);
+background-repeat: no-repeat, repeat-x, repeat;
+background-position:
+  10px 20px,
+  top right;
+```
+<br><br>
+Each value of the different properties will match up to the values in the same position in the other properties. Above, for example, image1's background-repeat value will be no-repeat. However, what happens when different properties have different numbers of values? The answer is that the smaller numbers of values will cycle — in the above example there are four background images but only two background-position values. The first two position values will be applied to the first two images, then they will cycle back around again — image3 will be given the first position value, and image4 will be given the second position value.<br><br>
+
+![](./assets/bg-10.png)
+
+## Background attachment
+Another option we have available for backgrounds is specifying how they scroll when the content scrolls. This is controlled using the background-attachment property, which can take the following values:<br><br>
+
+`scroll`: causes the element's background to scroll when the page is scrolled. If the element content is scrolled, the background does not move. In effect, the background is fixed to the same position on the page, so it scrolls as the page scrolls.<br>
+`fixed`: causes an element's background to be fixed to the viewport so that it doesn't scroll when the page or element content is scrolled. It will always remain in the same position on the screen.<br>
+`local`: fixes the background to the element it is set on, so when you scroll the element, the background scrolls with it.<br>
+
+The background-attachment property only has an effect when there is content to scroll, so we've made a demo to demonstrate the differences between the three values — have a look at [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (also see the [source code here](https://github.com/mdn/learning-area/tree/main/css/styling-boxes/backgrounds)).
+
+![](./assets/bg-whoop.png)
+
+![](./assets/bg-attachment.mp4)
