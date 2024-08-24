@@ -1263,7 +1263,7 @@ The `background-position` property allows you to choose the position in which th
 `Note`: The default `background-position` value is `(0,0)`.
 
 <div>
-  <img src="./assets/bg-4.png">
+  <img src="./assets/bg-4.png" height="250px">
 </div>
 <!-- 
 ![](./assets/bg-4.png)
