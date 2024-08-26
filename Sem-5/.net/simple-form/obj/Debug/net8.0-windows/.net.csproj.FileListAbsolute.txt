@@ -1,0 +1,15 @@
+D:\Ao\Code\WebCode\Web-Engineering\.net\bin\Debug\net8.0-windows\.net.exe
+D:\Ao\Code\WebCode\Web-Engineering\.net\bin\Debug\net8.0-windows\.net.deps.json
+D:\Ao\Code\WebCode\Web-Engineering\.net\bin\Debug\net8.0-windows\.net.runtimeconfig.json
+D:\Ao\Code\WebCode\Web-Engineering\.net\bin\Debug\net8.0-windows\.net.dll
+D:\Ao\Code\WebCode\Web-Engineering\.net\bin\Debug\net8.0-windows\.net.pdb
+D:\Ao\Code\WebCode\Web-Engineering\.net\obj\Debug\net8.0-windows\.net.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ao\Code\WebCode\Web-Engineering\.net\obj\Debug\net8.0-windows\.net.AssemblyInfoInputs.cache
+D:\Ao\Code\WebCode\Web-Engineering\.net\obj\Debug\net8.0-windows\.net.AssemblyInfo.cs
+D:\Ao\Code\WebCode\Web-Engineering\.net\obj\Debug\net8.0-windows\.net.csproj.CoreCompileInputs.cache
+D:\Ao\Code\WebCode\Web-Engineering\.net\obj\Debug\net8.0-windows\.net.sourcelink.json
+D:\Ao\Code\WebCode\Web-Engineering\.net\obj\Debug\net8.0-windows\.net.dll
+D:\Ao\Code\WebCode\Web-Engineering\.net\obj\Debug\net8.0-windows\refint\.net.dll
+D:\Ao\Code\WebCode\Web-Engineering\.net\obj\Debug\net8.0-windows\.net.pdb
+D:\Ao\Code\WebCode\Web-Engineering\.net\obj\Debug\net8.0-windows\.net.genruntimeconfig.cache
+D:\Ao\Code\WebCode\Web-Engineering\.net\obj\Debug\net8.0-windows\ref\.net.dll

@@ -1,0 +1,26 @@
+1. Create a New Windows Forms Project
+Open a command prompt or terminal.
+
+Navigate to the directory where you want to create your project.
+
+Run the following command to create a new Windows Forms project:
+
+dotnet new winforms -n MyWinFormsApp
+
+
+Navigate into the newly created project directory:
+
+
+cd MyWinFormsApp
+
+
+2. Build the Project
+Build the project to ensure that everything is set up correctly:
+
+dotnet build
+
+
+3. Run the Project
+To run the Windows Forms application, use the following command:
+
+dotnet run
