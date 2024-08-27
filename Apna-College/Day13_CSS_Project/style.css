@@ -7,6 +7,10 @@
     /* Overflow property */
     /* for scrolling bar to be visible in the main-content */
     /* overflow:hidden; means disable the scroll */
+
+}
+
+html {
     overflow: hidden;
 
 }
