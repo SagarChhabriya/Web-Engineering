@@ -1,0 +1,41 @@
+* {
+    font-family: 'Poppins', 'sans-serif';
+    margin: 0;
+    background-color: black;
+    color: white;
+    /* overflow: hidden; */
+}
+
+
+
+.color {
+    background-color: #1E1E1F;
+}
+
+.main {
+    display: flex;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: #1E1E1F;
+    width: 300px;
+    border-radius: 1rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+
+.page {
+    background-color: #1E1E1F;
+    height: 100vh;
+    flex: 1;
+    border-radius: 1rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    margin-right: 3rem;
+    /* overflow: auto; */
+
+
+
+}
