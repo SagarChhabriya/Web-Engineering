@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sagar Chhabriya</title>
     <link rel="stylesheet" href="style.css">
-
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -34,19 +37,118 @@
     <!-- Header div close -->
 
     <!-- About div start -->
-    <div class="about">
+    <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/user.png" alt="">
+                    <img src="images/about-1.jpg" alt="">
                 </div>
                 <div class="about-col-2">
-                    <h1>About Me</h1>
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium maiores molestiae voluptatum
+                        eveniet reiciendis? Voluptates quibusdam quod similique dignissimos ullam eveniet quisquam natus
+                        architecto minus! Numquam ea neque cumque iusto.
+                        Sunt non fugiat rem in provident natus laborum quod amet, at sint eos excepturi dolorem mollitia
+                        eius libero nulla assumenda. Reiciendis minima nihil aut, sapiente molestias ex sint vitae
+                        incidunt!</p>
+
+                    <div class="tab-titles">
+                        <!-- active links is child class: The underline will be on Skills -->
+                        <!-- onclick events to the links -->
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br>Designing Web/App Interfaces</li>
+                            <li><span>2019 - 2021</span><br>Web App Development</li>
+                            <li><span>2017 - 2019</span><br>Building Android/iOS apps </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>Designing Web/App Interfaces</li>
+                            <li><span>2016</span><br>Web App Development</li>
+                            <li><span>2014</span><br>Building Android/iOS apps </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- -------------------------------Services----------------------------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, fugiat! Nostrum, sint atque nobis
+                        corporis eum odit, facere aspernatur ipsum assumenda neque nulla quae, sapiente maiores minus
+                        suscipit. Error, optio?
+                        Velit facilis consequuntur, exercitationem pariatur magnam obcaecati voluptas eaque corrupti.
+                        Adipisci hic laboriosam dolorem aliquid, mollitia tempore quos vitae, culpa consectetur laborum
+                        ut reiciendis minus optio? Ipsa neque consequuntur cupiditate!</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam illum magni quod illo debitis
+                        voluptatibus enim porro quo aliquid iusto amet voluptate harum, rem eum quaerat quisquam ipsum?
+                        Aliquid, magni.
+                        Maiores labore, facilis maxime unde repudiandae nulla voluptatibus obcaecati temporibus, facere
+                        odio porro consectetur rerum reiciendis, eveniet iure voluptates ipsam ea architecto!
+                        Perspiciatis neque illum voluptatem temporibus velit nesciunt vitae.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo quia atque, voluptas rerum
+                        laboriosam doloribus hic consectetur ea, similique, architecto obcaecati consequatur asperiores!
+                        Dolorum corrupti deleniti porro iure cumque!
+                        Incidunt facilis autem nam, omnis ipsum atque esse doloribus expedita temporibus cumque aut eum
+                        veniam impedit nobis commodi porro iure dignissimos doloremque ratione consequuntur ex nesciunt
+                        sit. Illum, quas quod.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        // -----------------Script for about-----------------------
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        // when the tab-link get clicked hide the content and underline of active-link. 
+        // And diplay the content and underline of clicked link
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
 </body>
 
 </html>

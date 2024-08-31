@@ -2,13 +2,23 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", 'sans-serif';
+    font-family: "Roboto Slab", serif;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #080808;
+    /* background-color: #080808;
+    background-color: #d3d1cf;
+    background-color: #295f98;
+    background-color: #6C4E31;
+    background-color: #D0B8A8;
+    background-color: #F8EDE3; */
+    background-color: #3C3D37;
+
     color: #fff;
 }
+
+
 
 #header {
     height: 100vh;
@@ -72,10 +82,111 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 {
-    font-size: 60px;
+    font-size: 4rem;
     margin-top: 20px;
 }
 
 .header-text h1 span {
     color: #ff004f;
+
+}
+
+/*------------------------------------ About Section Starts here---------------------------------------- */
+
+
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    /* top left-right bottom */
+    margin: 20px 0 40px;
+
+}
+
+.tab-links {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    margin-right: 50px;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    margin: 10px 0;
+    list-style: none;
+    line-height: 20px;
+
+}
+
+.tab-contents ul li span {
+    color: #ff004f;
+    font-size: 16px;
+}
+
+.tab-contents {
+    /* hide the content/text */
+    display: none;
+}
+
+.tab-contents.active-tab {
+    /* display the content of only active-tab */
+    display: block;
+}
+
+
+/* -----------------------------------------------Services------------------------------------------------- */
+#services {
+    /* top-bottom left-right */
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
 }
