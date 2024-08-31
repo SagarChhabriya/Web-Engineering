@@ -4,3 +4,12 @@ Google Fonts:
     Embed code in the <head> of your html
     Add CSS Rule:
         Ex: font-family: "Roboto Slab", serif;
+
+
+Font Awesome:
+    Step1:  https://cdnjs.com/libraries
+    Step2:  Type Font Awesome in search bar
+    Step3:  Copy the first url
+            https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
+    Step4: Select the icon and copy the required code snippet [HTML, React, Vue, SVG]
+        Ex: <i class="fa-solid fa-code"></i>
