@@ -11,5 +11,7 @@ Font Awesome:
     Step2:  Type Font Awesome in search bar
     Step3:  Copy the first url
             https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
-    Step4: Select the icon and copy the required code snippet [HTML, React, Vue, SVG]
-        Ex: <i class="fa-solid fa-code"></i>
+    Step4:  Add the url in the head of html file
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    Step4:  Select the icon and copy the required code snippet [HTML, React, Vue, SVG]
+            Ex: <i class="fa-solid fa-code"></i>
