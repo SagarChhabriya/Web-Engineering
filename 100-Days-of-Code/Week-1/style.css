@@ -13,6 +13,11 @@ body {
 }
 
 
+html {
+    /* for routing to the nav bar options */
+    scroll-behavior: smooth;
+}
+
 
 #header {
     height: 100vh;
@@ -303,4 +308,189 @@ nav ul li a:hover::after {
 
 .btn:hover {
     background: #ff004f;
+}
+
+/* ---------------------------------------------------------------Contact----------------------------------------------------------------- */
+
+.contact-left {
+    /* flex basis distributes the width */
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.download {
+    display: inline-block;
+
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn-submit {
+    display: inline-block;
+    background: #3C3D37;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.copyright {
+    /* text-align: center;
+    justify-content: center; */
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i {
+    color: #ff004f;
+}
+
+/* Making it responsive: Media Queries */
+/* ---------------------------------------------------------CSS Responsive------------------------------------------------------------ */
+
+/* for the menu bar  */
+nav .fas {
+    display: none;
+}
+
+/* Note the space between 'and' operator and parentheses */
+@media only screen and (max-width:600px) {
+    #header {
+        background-image: url(images/background-responsive.JPG);
+        width: 100%;
+    }
+
+    .header-text {
+        margin-top: 100%;
+        color: black;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .header-text h1 {
+        font-size: 35px;
+    }
+
+    .sub-title {
+        font-size: 2.5rem;
+    }
+
+    .but.download {
+        font-size: 10px;
+        padding: 0;
+        text-align: center;
+
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        /* z-index will make the bars/burger logo to stay behined */
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav>i {
+        position: fixed;
+        right: 25px;
+        margin-top: 25px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    /* Fit the About Me picture */
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
 }

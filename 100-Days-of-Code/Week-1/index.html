@@ -21,13 +21,15 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-solid fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
 
             <div class="header-text">
@@ -188,6 +190,49 @@
         </div>
     </div>
 
+    <!-- -------------------------------------------------------------Contact------------------------------------------------------>
+
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>012345678</p>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-stack-overflow"></i></a>
+                        <a href="#"><i class="fa-brands fa-medium"></i></a>
+                    </div>
+
+                    <a href="#" class="btn download" download="">Download CV</a>
+
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Type your message here" id=""></textarea>
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Sagar Chhabriya. Made with <i class="fa-solid fa-heart"></i> by Sagar Chhabriya.</p>
+        </div>
+    </div>
+
+
+
+
+
     <script>
 
         // -----------------Script for about-----------------------
@@ -211,6 +256,19 @@
         }
 
     </script>
+
+    <!-- ---------------------------Script for Sidemenu-------------------------------------------------- -->
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px"
+        }
+    </script>
+
 </body>
 
 </html>
