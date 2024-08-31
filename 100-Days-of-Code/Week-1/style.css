@@ -7,5 +7,75 @@
 
 body {
     background-color: #080808;
-    color: #fff ;
+    color: #fff;
+}
+
+#header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 250px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    /* Now this is invisible, making it 100% will display the underline but we want this when we hover */
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    /* Add 6px and will strike throught the text. Add -6px it will place the line at the bottom (make it underline)*/
+    bottom: -6px;
+
+    /* After adding hover to the after apply transition */
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    /* When the mouse enters it will make the underline to 100% with a transition of 0.5s */
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
 }
