@@ -49,10 +49,11 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #262626;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
+
 }
 
 nav ul li a::after {
@@ -81,8 +82,13 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-top: 20px;
+    color: #262626;
+}
+
+.header-text p {
+    color: #262626;
 }
 
 .header-text h1 span {
@@ -106,14 +112,20 @@ nav ul li a:hover::after {
 
 .about-col-1 {
     flex-basis: 35%;
+    transition: transform 0.5s ease;
 }
 
 .about-col-1 img {
     width: 100%;
     border-radius: 15px;
-
 }
 
+
+
+.about-col-1:hover {
+    transform: scale(1.1);
+
+}
 
 
 .about-col-2 {
@@ -130,7 +142,12 @@ nav ul li a:hover::after {
     display: flex;
     /* top left-right bottom */
     margin: 20px 0 40px;
+    color: #fff;
 
+}
+
+.tab-titles p {
+    font-size: 25px;
 }
 
 .tab-links {
@@ -139,6 +156,11 @@ nav ul li a:hover::after {
     cursor: pointer;
     position: relative;
     margin-right: 50px;
+    transition: 0.5s ease;
+}
+
+.tab-links:hover {
+    font-size: 20px;
 }
 
 .tab-links::after {
@@ -165,14 +187,16 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #ff004f;
+    color: #ff0051;
     font-size: 20px;
-    font-weight: 1000;
+    font-weight: 500;
 }
 
 .tab-contents {
+    /* default all the 'tab-contents' p tags will appear, so only display the first one's */
     /* hide the content/text */
     display: none;
+
 }
 
 .tab-contents.active-tab {
@@ -219,7 +243,7 @@ nav ul li a:hover::after {
 }
 
 .services-list div h2 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500;
     margin-bottom: 15px;
 }
@@ -235,7 +259,13 @@ nav ul li a:hover::after {
 .services-list div:hover {
     background: #ff004f;
     transform: translateY(-10px);
+    box-shadow: 10px 5px 5px black;
+    color: black;
+}
 
+.services-list p {
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 /* --------------------------------------------------------------Portfolio------------------------------------------------------------- */
@@ -291,6 +321,7 @@ nav ul li a:hover::after {
 
 .work:hover {
     transform: scale(1.05);
+    box-shadow: 10px 5px 5px black;
 }
 
 .btn {
