@@ -1,0 +1,6 @@
+Google Fonts:
+    Search for google Fonts 
+    Select the font-family of your choice
+    Embed code in the <head> of your html
+    Add CSS Rule:
+        Ex: font-family: "Roboto Slab", serif;
