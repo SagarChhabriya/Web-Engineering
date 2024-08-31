@@ -214,7 +214,8 @@
 
                 </div>
                 <div class="contact-right">
-                    <form action="">
+                    <form name="contact-form" method="post"
+                        action="https://script.google.com/macros/s/AKfycbw5L8AFglZPe1uTUnrTj9Ty5YfbK_SqhpIGC-dY6Q6Fz4PLX7lGIsc85xRYF-DN4RAs/exec">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="message" rows="6" placeholder="Type your message here" id=""></textarea>
@@ -268,18 +269,7 @@
             sidemenu.style.right = "-200px"
         }
     </script>
-    <!-- --------------------------------------Script for GoogleSheets -->
-    <script>
-        const scriptURL = '<SCRIPT URL>'
-        const form = document.forms['submit-to-google-sheet']
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+   
 </body>
 
 </html>
