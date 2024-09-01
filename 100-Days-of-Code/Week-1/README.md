@@ -46,7 +46,7 @@ Feel free to fork the repository and make contributions! For major changes or en
 
 ## Contact
 
-For any inquiries or feedback, please reach out to me at [LinkedIn](linkedin.com/in/sagar-chhabriya/).
+For any inquiries or feedback, please reach out to me at [LinkedIn](https://linkedin.com/in/sagar-chhabriya/).
 
 ---
 
