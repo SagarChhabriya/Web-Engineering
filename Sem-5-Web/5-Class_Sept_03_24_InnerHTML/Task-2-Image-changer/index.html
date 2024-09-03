@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background: burlywood;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function changeImage() {
+            var image = document.querySelector("img");
+            // if (image.src.match("work-1")) {
+            //     image.src = "/Sem-5-Web/5-Class_Sept_03_24_InnerHTML/images/work-2.png";
+            // } else {
+            //     image.src = "/Sem-5-Web/5-Class_Sept_03_24_InnerHTML/images/work-1.png";
+            // }
+            counter = parseInt(image.src.match(/work-(\d).png/)[1]);
+            if (counter < 4) {
+                image.src = `/Sem-5-Web/5-Class_Sept_03_24_InnerHTML/images/work-${++counter}.png`
+            }
+            else {
+                counter = 1;
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <img src="/Sem-5-Web/5-Class_Sept_03_24_InnerHTML/images/work-1.png" alt="">
+    <button onclick="changeImage()">Change Image</button>
+</body>
+
+</html>

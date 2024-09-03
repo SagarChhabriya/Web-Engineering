@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background: burlywood;
+        }
+
+        div {
+            text-align: center;
+            justify-content: center;
+            font-size: 50px;
+
+        }
+
+        .btn {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding: 10px;
+
+        }
+    </style>
+
+    <script>
+        function update() {
+            var value = document.querySelector(".value");
+            var currentValue = parseInt(value.innerHTML);
+            if (currentValue < 10) {
+                value.innerHTML = currentValue + 1;
+            } else {
+                value.innerHTML = 1;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <p class="value">1</p>
+        <button class="btn" onclick="update()">Next</button>
+    </div>
+
+</body>
+
+</html>
