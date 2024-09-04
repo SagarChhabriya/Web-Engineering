@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.timer {
+
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border-color: black;
+
+    background-image: url(image.png);
+    background-size: cover;
+
+    font-size: 50px;
+    font-weight: 500;
+
+    margin-top: 40vh;
+    height: 40vh;
+    width: 40vh;
+
+    text-align: center;
+
+}
