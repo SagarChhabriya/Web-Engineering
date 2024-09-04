@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 80vh;
+            height: 50vh;
+
+        }
+    </style>
+    <script>
+
+        counter = 1;
+
+        function asc() {
+
+            if (counter > 3) {
+                counter = 1;
+            }
+            path = `/100-Days-of-Code/Week-1/images/work-${counter}.png`;
+            image = document.getElementsByClassName("image")[0].src = path;
+            console.log(document.getElementsByClassName("image")[0]);
+            counter = counter + 1;
+
+        }
+
+        // setInterval(asc, 1000);
+
+
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <img class="image" src="/100-Days-of-Code/Week-1/images/work-1.png" alt="">
+
+    </div>
+</body>
+
+</html>
