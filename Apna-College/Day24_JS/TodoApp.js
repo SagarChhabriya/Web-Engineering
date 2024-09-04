@@ -11,6 +11,8 @@ function addTask() {
     btn.classList.add("del");
     btn.innerHTML = "Delete";
 
+
+    //  Event delegation
     // Attach the delete functionality to the button
     btn.addEventListener("click", deleteTask);
 
