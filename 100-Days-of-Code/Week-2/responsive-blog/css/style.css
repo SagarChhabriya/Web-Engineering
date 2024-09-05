@@ -8,12 +8,95 @@
 
 body {
 
-    /* background-color: #d1cece7a; */
-    /* background-color: floralwhite; */
-    background: #fff;
+    background-color: #fff;
     color: #fff;
+
 }
 
-/* nav{
+#header {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    background-size: cover;
+    background-position: center;
+    background: #d9a7c7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fffcdc, #d9a7c7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
-} */
+
+
+
+.container {
+    padding: 10px 10%;
+    width: 100vw;
+    /* uncomment it to make the nav bar be fully filled with white color */
+    /* background: #fff; */
+}
+
+.sidemenu {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #fff;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #262626;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(105% + 1.3px);
+    height: 328px;
+}
+
+.wave .shape-fill {
+    fill: #FFFFFF;
+
+}
+
+
+
+/* ---------------------------------------------------------------------blogs---------------------------------------------------------- */
+.cards {
+    display: flex;
+
+}
+
+.card-design{
+    width: ;
+}
