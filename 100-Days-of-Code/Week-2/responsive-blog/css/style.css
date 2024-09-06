@@ -355,10 +355,60 @@ form .btn-submit {
     line-height: 100px;
 }
 
-/* ---------------------------------------------------posts---------------------------------------------------------- */
-/* Disable hover effect for post1.html */
-.post1 .blog:hover .layer {
-    opacity: 1;
-    transform: none;
-    /* Or other styles to neutralize the hover effect */
+
+
+
+/* ------------------------------------------------Responsivness----------------------------------------------- */
+@media (max-width: 400px) {
+
+    #sidemenu {
+        display: flex;
+    }
+
+    #sidemenu a {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .container h2 {
+        font-size: 40px;
+
+    }
+
+}
+
+@media (max-width:580px) {
+    #sidemenu {
+        display: flex;
+    }
+}
+
+@media(max-width:430px) {
+    #sidemenu {
+        display: flex;
+    }
+
+    #sidemenu a {
+        margin: 0;
+    }
+
+}
+
+@media(max-width:380px) {
+    nav {
+        background: #d9a7c7;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #fffcdc, #d9a7c7);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .container h2 {
+        font-size: 30px;
+
+    }
 }

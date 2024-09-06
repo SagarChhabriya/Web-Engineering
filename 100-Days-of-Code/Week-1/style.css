@@ -402,7 +402,7 @@ form textarea {
     border-radius: 6px;
 }
 
-form .btn-submit {
+form .btn-submit { 
     display: inline-block;
     background: #3C3D37;
     font-size: 15px;
