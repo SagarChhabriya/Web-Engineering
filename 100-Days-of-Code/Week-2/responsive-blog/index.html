@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Blog</title>
-
-
-
     <link rel="stylesheet" href="css/style.css">
+    <!-- cdnjs: for Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,14 +21,15 @@
         <div class=" container">
             <nav>
                 <ul id="sidemenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Post</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="post.html">Post</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="hero">
                 <h1>Welcome to Your Next Favorite Blog</h1>
-                <a class="cta-button">Read Our Latest Posts</a>
+                <a href="#" class="btn">Read Our Latest Posts</a>
 
             </div>
             <div class="wave">
@@ -43,123 +48,162 @@
 
     <!-- ---------------------------------------------------------Blogs----------------------------------------------------- -->
 
-    <div class="blogs">
+    <div id="blogs">
         <div class="container">
             <h2 class="sub-title">Latest Posts</h2>
             <div class="blog-list">
                 <div class="blog">
                     <img src="css/assets/dog.jpg" alt="">
                     <div class="layer">
-                        <h3>Dog Management System</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sequi, qui adipisci
-                            consectetur deserunt possimus maiores cum doloremque iste minus quo sunt commodi, sit
-                            nesciunt quos nam tempore molestiae ducimus.</p>
+                        <h3>Fun Training Techniques</h3>
+                        <p>Enjoy the journey of training your dog with engaging techniques. Enhance your dog's skills
+                            while having fun together and seeing great results.</p>
                         <a href="#" class="make-blue">Read More</a>
                     </div>
                 </div>
                 <div class="blog">
                     <img src="css/assets/dog3.jpg" alt="">
                     <div class="layer">
-                        <h3>Dog Management System</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sequi, qui adipisci
-                            consectetur deserunt possimus maiores cum doloremque iste minus quo sunt commodi, sit
-                            nesciunt quos nam tempore molestiae ducimus.</p>
+                        <h3>Nutritious Diet for a Happy Pup</h3>
+                        <p>Keep your dog thriving with a balanced diet. Learn about the essential nutrients that will
+                            help your pup feel energetic and joyful every day.</p>
+                        <a href="#" class="make-blue">Read More</a>
+                    </div>
+                </div>
+                <div class="blog">
+                    <img src="css/assets/palace.jpg" alt="">
+                    <div class="layer">
+                        <h3>A Royal Retreat</h3>
+                        <p>Discover the grandeur and elegance of luxurious accommodations. Experience a stay fit for
+                            royalty with stunning views and exceptional service.
+                        </p>
+                        <a href="#" class="make-blue">Read More</a>
+                    </div>
+                </div>
+                <div class="blog">
+                    <img src="css/assets/rickshaw.jpg" alt="">
+                    <div class="layer">
+                        <h3>Charming Rickshaw Rides</h3>
+                        <p>Embrace the local culture with a delightful rickshaw ride. Enjoy a scenic journey through
+                            bustling streets and picturesque spots.
+                        </p>
                         <a href="#" class="make-blue">Read More</a>
                     </div>
                 </div>
                 <div class="blog">
                     <img src="css/assets/dog2.jpg" alt="">
                     <div class="layer">
-                        <h3>Dog Management System</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sequi, qui adipisci
-                            consectetur deserunt possimus maiores cum doloremque iste minus quo sunt commodi, sit
-                            nesciunt quos nam tempore molestiae ducimus.</p>
+                        <h3>Grooming Tips for a Fabulous Coat</h3>
+                        <p>Pamper your dog with grooming tips that keep their coat looking stunning and their spirits
+                            high. Enjoy the bonding time and see your dog shine!</p>
                         <a href="#" class="make-blue">Read More</a>
                     </div>
                 </div>
                 <div class="blog">
                     <img src="css/assets/dog1.jpg" alt="">
                     <div class="layer">
-                        <h3>Dog Management System</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sequi, qui adipisci
-                            consectetur deserunt possimus maiores cum doloremque iste minus quo sunt commodi, sit
-                            nesciunt quos nam tempore molestiae ducimus.</p>
+                        <h3>Strengthening Your Bond</h3>
+                        <p>Deepen your connection with your dog through positive interactions and loving care. Build a
+                            strong, trusting relationship that brings joy to both of you.</p>
+                        <a href="#" class="make-blue">Read More</a>
+                    </div>
+                </div>
+                <div class="blog">
+                    <img src="css/assets/street.jpg" alt="">
+                    <div class="layer">
+                        <h3>Vibrant City Streets</h3>
+                        <p>Immerse yourself in the lively atmosphere of city streets. Explore vibrant markets, charming
+                            cafes, and unique landmarks.</p>
+                        <a href="#" class="make-blue">Read More</a>
+                    </div>
+                </div>
+                <div class="blog">
+                    <img src="css/assets/tea-hotel.jpg" alt="">
+                    <div class="layer">
+                        <h3>Relaxing Tea Hotel Experience</h3>
+                        <p>Indulge in a serene escape at our tea hotel. Savor a variety of exquisite teas in a tranquil
+                            setting designed for ultimate relaxation.</p>
                         <a href="#" class="make-blue">Read More</a>
                     </div>
                 </div>
                 <div class="blog">
                     <img src="css/assets/dog4.jpg" alt="">
                     <div class="layer">
-                        <h3>Dog Management System</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sequi, qui adipisci
-                            consectetur deserunt possimus maiores cum doloremque iste minus quo sunt commodi, sit
-                            nesciunt quos nam tempore molestiae ducimus.</p>
-                        <a href="#" class="make-blue">Read More</a>
-                    </div>
-                </div>
-                <div class="blog">
-                    <img src="css/assets/dog4.jpg" alt="">
-                    <div class="layer">
-                        <h3>Dog Management System</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sequi, qui adipisci
-                            consectetur deserunt possimus maiores cum doloremque iste minus quo sunt commodi, sit
-                            nesciunt quos nam tempore molestiae ducimus.</p>
+                        <h3>Keeping Your Dog Healthy</h3>
+                        <p>Stay ahead of common health issues with proactive care. Learn how to keep your dog in top
+                            shape and enjoy many happy, healthy years together.</p>
                         <a href="#" class="make-blue">Read More</a>
                     </div>
                 </div>
                 <div class="blog">
                     <img src="css/assets/dog6.jpg" alt="">
                     <div class="layer">
-                        <h3>Dog Management System</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sequi, qui adipisci
-                            consectetur deserunt possimus maiores cum doloremque iste minus quo sunt commodi, sit
-                            nesciunt quos nam tempore molestiae ducimus.</p>
+                        <h3>Exciting Activities for Your Dog</h3>
+                        <p>Keep your dog entertained and happy with a variety of fun activities. From playful games to
+                            outdoor adventures, make every day exciting!</p>
                         <a href="#" class="make-blue">Read More</a>
                     </div>
                 </div>
                 <div class="blog">
                     <img src="css/assets/dog7.jpg" alt="">
                     <div class="layer">
-                        <h3>Dog Management System</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sequi, qui adipisci
-                            consectetur deserunt possimus maiores cum doloremque iste minus quo sunt commodi, sit
-                            nesciunt quos nam tempore molestiae ducimus.</p>
+                        <h3>Welcoming a New Puppy</h3>
+                        <p>Embrace the joy of a new puppy with a smooth transition. Get all the essentials and tips for
+                            a happy start to this wonderful new chapter.</p>
                         <a href="#" class="make-blue">Read More</a>
                     </div>
                 </div>
                 <div class="blog">
                     <img src="css/assets/dog8.jpg" alt="">
                     <div class="layer">
-                        <h3>Dog Management System</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sequi, qui adipisci
-                            consectetur deserunt possimus maiores cum doloremque iste minus quo sunt commodi, sit
-                            nesciunt quos nam tempore molestiae ducimus.</p>
+                        <h3>Socializing Your Dog</h3>
+                        <p>Foster a well-rounded and friendly dog through positive socialization. Enjoy seeing your pup
+                            thrive in various settings and interactions.</p>
                         <a href="#" class="make-blue">Read More</a>
                     </div>
                 </div>
                 <div class="blog">
                     <img src="css/assets/dog9.jpg" alt="">
                     <div class="layer">
-                        <h3>Dog Management System</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sequi, qui adipisci
-                            consectetur deserunt possimus maiores cum doloremque iste minus quo sunt commodi, sit
-                            nesciunt quos nam tempore molestiae ducimus.</p>
+                        <h3>Understanding Your Dog’s Signals</h3>
+                        <p>Unlock the secrets of your dog's behavior and body language. Gain valuable insights that
+                            enhance your communication and deepen your bond.</p>
                         <a href="#" class="make-blue">Read More</a>
                     </div>
                 </div>
                 <div class="blog">
                     <img src="css/assets/dog10.jpg" alt="">
                     <div class="layer">
-                        <h3>Dog Management System</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia sequi, qui adipisci
-                            consectetur deserunt possimus maiores cum doloremque iste minus quo sunt commodi, sit
-                            nesciunt quos nam tempore molestiae ducimus.</p>
+                        <h3>Enjoying Travels with Your Dog</h3>
+                        <p>Make traveling with your dog a fun and memorable experience. Follow these tips for a smooth
+                            journey and create wonderful adventures together.</p>
                         <a href="#" class="make-blue">Read More</a>
                     </div>
                 </div>
+                <div class="blog">
+                    <img src="css/assets/laptop.jpg" alt="">
+                    <div class="layer">
+                        <h3>Tech Meets Comfort</h3>
+                        <p>Discover the perfect blend of technology and comfort. Whether working remotely or enjoying
+                            entertainment, find everything you need for a productive stay.</p>
+                        <a href="#" class="make-blue">Read More</a>
+                    </div>
+                </div>
+                <div class="blog">
+                    <img src="css/assets/man-on-road.jpg" alt="">
+                    <div class="layer">
+                        <h3>Adventurous Road Trip</h3>
+                        <p> Hit the open road and embrace the thrill of adventure. Experience the freedom of travel with
+                            breathtaking landscapes and memorable stops.</p>
+                        <a href="#" class="make-blue">Read More</a>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
+    <a href="#" class="btn">See more</a>
 
     <div class="copyright">
         <p>Copyright &copy; Sagar Chhabriya. Made with <i class="fa-solid fa-heart"></i> by Sagar Chhabriya.</p>

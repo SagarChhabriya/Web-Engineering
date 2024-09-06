@@ -13,6 +13,12 @@ body {
 
 }
 
+
+html {
+    /* for routing to the nav bar options */
+    scroll-behavior: smooth;
+}
+
 #header {
     height: 100vh;
     width: 100%;
@@ -77,6 +83,26 @@ nav ul li a {
 
 }
 
+nav ul li a::after {
+    content: '';
+    /* Now this is invisible, making it 100% will display the underline but we want this when we hover */
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    /* Add 6px and will strike throught the text. Add -6px it will place the line at the bottom (make it underline)*/
+    bottom: -6px;
+
+    /* After adding hover to the after apply transition */
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    /* When the mouse enters it will make the underline to 100% with a transition of 0.5s */
+    width: 100%;
+}
+
 
 .wave {
     position: absolute;
@@ -123,21 +149,7 @@ nav ul li a {
     color: #ff004f;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #ff004f;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: transform 0.5s ease;
-    /* Added transition for color */
-}
-
-.cta-button:hover {
-    font-size: 2rem;
-}
+        
 
 
 /* ---------------------------------------------------------------------blogs---------------------------------------------------------- */
@@ -233,4 +245,112 @@ nav ul li a {
 
 .copyright i {
     color: #ff004f;
+}
+
+/* ---------------------------------------------------------------Contact----------------------------------------------------------------- */
+
+.contact-left {
+    /* flex basis distributes the width */
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ff004f;
+    display: inline-block;
+    transition: transform 0.5s;
+
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.download {
+    display: inline-block;
+
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn-submit {
+    display: inline-block;
+    background: #ff004f;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.copyright {
+    /* text-align: center;
+    justify-content: center; */
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i {
+    color: #ff004f;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    border-radius: 5px;
+    padding: 14px 50px;
+    text-decoration: none;
+    color: #fff;
+    background: #ff004f;
+    transition: transform 0.5s;
+
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* ----------------------------------------------About---------------------------------------------------------- */
+.container h2 {
+    line-height: 100px;
 }
