@@ -1,16 +1,46 @@
-Variables in Php 
-loosly typed language
+# Table of Contents
 
-String Data Types
-1. String
-2. Integer
-3. Float
-4. Boolean
-5. Object
-6. Array
-7. NULL
+1. [Variables in PHP](#variables-in-php)
+2. [String Data Types](#string-data-types)
+3. [var_dump() Function](#var_dump-function)
+4. [String Functions](#string-functions)
+5. [Arithmetic Operations](#arithmetic-operations)
+6. [Logical Operators](#logical-operators)
+7. [Control Structures](#control-structures)
+   - [If-Else Statement](#if-else-statement)
+   - [If-Elseif-Else Statement](#if-elseif-else-statement)
+   - [Switch Case](#switch-case)
+8. [Loops](#loops)
+   - [While Loop](#while-loop)
+   - [For Loop](#for-loop)
+   - [Do-While Loop](#do-while-loop)
+   - [Foreach Loop](#foreach-loop)
+9. [Functions](#functions)
+10. [Dates in PHP](#dates-in-php)
+11. [Associative Arrays](#associative-arrays)
+12. [GET and POST Requests](#get-and-post-requests)
 
+---
 
+## Variables in PHP
+
+PHP is a loosely typed language, meaning you do not need to declare the data type of a variable.
+
+## String Data Types
+
+1. **String**
+2. **Integer**
+3. **Float**
+4. **Boolean**
+5. **Object**
+6. **Array**
+7. **NULL**
+
+## `var_dump()` Function
+
+Displays structured information (type and value) about one or more variables.
+
+```php
 var_dump() function
 
 $friends = array("sagar", "qadeer", "kamlesh", "deepak");
@@ -68,6 +98,8 @@ else{
 - Switch Case in PHP
 ```php
 <? php
+
+
 
 $age = 67;
 
