@@ -294,6 +294,11 @@ function displayForm() {
 HTML;
 }
 ?>
-
 ```
 
+## External Php
+```php
+    <?php
+        include("name.php");
+    ?>
+```
