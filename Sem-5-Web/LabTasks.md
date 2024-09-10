@@ -15,3 +15,8 @@ function asc(){
 
 setInterval(asc,1000);
 ```
+
+## Sept_09_04
+1. Bio Data
+2. Loop
+3. Function
