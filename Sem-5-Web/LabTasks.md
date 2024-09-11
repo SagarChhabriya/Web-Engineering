@@ -20,3 +20,10 @@ setInterval(asc,1000);
 1. Bio Data
 2. Loop
 3. Function
+
+## Sept_11_24
+1. MySQL in XAMPP
+2. Db connection with php
+
+## XAMPP MySQL Error Solution
+[Youtube](https://www.youtube.com/watch?v=KZrjoKRUkZg)
