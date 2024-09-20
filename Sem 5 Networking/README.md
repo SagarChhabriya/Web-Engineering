@@ -209,3 +209,6 @@ Cisco Packet Tracer Github repos
 
 ![](assets/OSI_VS_TC_IP_With_Protocols.png)
 ![](assets/TCP_IP_Protocol_Suite.png)
+
+# Baap re Baap
+![](assets/OSI-Model.png)
