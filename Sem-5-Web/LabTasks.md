@@ -28,10 +28,6 @@ setInterval(asc,1000);
 ## XAMPP MySQL Error Solution
 [Youtube](https://www.youtube.com/watch?v=KZrjoKRUkZg)
 
-
+ 
 ## Sept_18_24
 Asynchronous JS + Php Handling
-
-## Sept_19_2024
-Networking: STP (Spanning Tree Protocol)
-Loop in swtich: Root, Bridge, and Block Concept
