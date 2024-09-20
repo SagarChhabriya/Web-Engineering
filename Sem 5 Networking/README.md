@@ -204,3 +204,8 @@ https://mahi130.wordpress.com/2011/06/21/packet-tracer-shortcuts/
 
 ---
 Cisco Packet Tracer Github repos
+
+
+
+![](assets/OSI_VS_TC_IP_With_Protocols.png)
+![](assets/TCP_IP_Protocol_Suite.png)
