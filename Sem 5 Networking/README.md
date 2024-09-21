@@ -212,3 +212,124 @@ Cisco Packet Tracer Github repos
 
 # Baap re Baap
 ![](assets/OSI-Model.png)
+
+
+
+# Networking Commands
+1. IPCONFIG: Displays the current IP configuration of your network interfaces, including IP address, subnet mask, and default gateway.
+
+2. IPCONFIG /all: Provides detailed information about all network interfaces, including MAC addresses, DHCP status, DNS servers, and more.
+
+3. NSLOOKUP: A tool used to query the Domain Name System (DNS) to obtain the IP address associated with a domain name or vice versa.
+
+4. PING: Tests the connectivity to a specific IP address or domain name by sending ICMP echo request packets and measuring the response time.
+
+5. TRACERT: Traces the route packets take to a destination IP address or domain name, showing each hop along the way and measuring the time it takes to reach each one.
+
+
+## Commands Examples  (Network Command Line Tools)
+
+This document provides an overview of commonly used network command-line tools, including definitions and examples for each command.
+
+## 1. IPCONFIG
+
+**Definition:**  
+Displays the current network configuration for all network interfaces on a Windows machine.
+
+**Example:**
+```bash
+ipconfig
+```
+
+**output**<br>
+
+```yaml
+Ethernet adapter Local Area Connection:
+   IPv4 Address: 192.168.1.10
+   Subnet Mask: 255.255.255.0
+   Default Gateway: 192.168.1.1
+
+```
+
+
+## 2. IPCONFIG /all
+
+**Definition**<br>
+Displays detailed information about all network interfaces, including physical address, DHCP status, and more.<br>
+
+**Example**<br>
+```bash
+ipconfig /all
+```
+
+**output**<br>
+
+```yaml
+Host Name: mycomputer
+Primary Dns Suffix: 
+Node Type: Hybrid
+IP Routing Enabled: No
+WINS Proxy Enabled: No
+
+Ethernet adapter Local Area Connection:
+   Description: Intel(R) Ethernet Connection
+   Physical Address: 00-1A-2B-3C-4D-5E
+   DHCP Enabled: Yes
+   Autoconfiguration Enabled: Yes
+   IPv4 Address: 192.168.1.10
+   Lease Obtained: Monday, September 20, 2024 10:00 AM
+   Lease Expires: Tuesday, September 21, 2024 10:00 AM
+
+```
+
+## 3. NSLOOKUP
+
+**Definition**<br>
+Queries the DNS to obtain the domain name or IP address mapping for a specific hostname.<br>
+
+
+**Example**<br>
+```bash
+nslookup example.com
+```
+
+
+```makefile
+Server:  dns.server.com
+Address:  192.168.1.1
+
+Name:    example.com
+Addresses:  93.184.216.34
+
+```
+
+
+## 4. PING
+**Definition**<br>
+Tests the connectivity to another host on a network by sending ICMP Echo Request messages.<br>
+
+```bash
+ping google.com
+```
+
+```python
+Pinging google.com [172.217.14.206] with 32 bytes of data:
+Reply from 172.217.14.206: bytes=32 time=14ms TTL=56
+Reply from 172.217.14.206: bytes=32 time=13ms TTL=56
+
+```
+
+## 5. TRACERT
+**Definition**<br>
+Traces the route that packets take to a network host, showing each hop along the way.<br>
+
+```bash
+tracert google.com
+```
+
+```css
+Tracing route to google.com [172.217.14.206] over a maximum of 30 hops:
+  1     1 ms     <1 ms     <1 ms  router.local [192.168.1.1]
+  2     10 ms      9 ms      9 ms  10.0.0.1
+  3     15 ms     14 ms     15 ms  172.217.14.206
+```
