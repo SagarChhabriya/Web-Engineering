@@ -31,3 +31,7 @@ setInterval(asc,1000);
  
 ## Sept_18_24
 Asynchronous JS + Php Handling
+
+
+## Sept_24_2024
+1. Arrow Function (i.e., lambda, anoznymous, callback)
