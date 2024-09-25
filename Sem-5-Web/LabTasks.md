@@ -35,3 +35,5 @@ Asynchronous JS + Php Handling
 
 ## Sept_24_2024
 1. Arrow Function (i.e., lambda, anoznymous, callback)
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 35vh;
+        }
+
+        .btn {
+            background-color: orange;
+            padding: 5px;
+            font-size: 20px;
+        }
+
+        .value {
+            font-size: 20px;
+            font-weight: 700;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <p class="value">1</p>
+        <button class="btn" onclick="update()">Next</button>
+    </div>
+
+
+
+    <script>
+        function update() {
+            var value = document.querySelector(".value");
+            var currentValue = parseInt(value.innerHTML);
+
+            if (currentValue < 10) {
+                value.innerHTML = currentValue + 1;
+            }
+            else {
+                value.innerHTML = 1;
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
