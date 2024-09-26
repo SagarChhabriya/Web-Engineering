@@ -5,32 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+    <title>imageChanger</title>
 
 </head>
 
 <body>
 
 
-    <div class="container">
-        <img src="assets/bg-1.png" alt="" id="img">
-    </div>
-    <p id="path">Path</p>
+    <p>Running...</p>
+    <img src="assets/bg-1.png" alt="">
 
 
     <script>
-        let value = document.querySelector("#img");
-        let currentValue = value.innerHTML;
-        let path = document.querySelector("#path");
-        path.innerHTML = currentValue;
 
+        counter = 1;
+
+        function asc() {
+            if (counter > 5) {
+                counter = 1;
+            }
+            document.querySelector("img").src = path = `assets/bg-${counter++}.png`;
+        }
+        setInterval(asc, 1000);
 
     </script>
 </body>
