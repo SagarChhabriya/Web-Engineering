@@ -1,3 +1,45 @@
+# Table of Contents
+
+1. [Interchanging IP Addresses on Cisco Router](#interchanging-ip-addresses-on-cisco-router)
+   - [Current Configuration](#current-configuration)
+   - [Steps to Interchange IP Addresses](#steps-to-interchange-ip-addresses)
+   - [Verification](#verification)
+
+2. [Network Setup Overview](#network-setup-overview)
+   - [Router-A Configuration](#router-a-configuration)
+   - [Router-B Configuration](#router-b-configuration)
+   - [Router-C Configuration](#router-c-configuration)
+   - [Router-D Configuration](#router-d-configuration)
+
+3. [Routing Configuration](#routing-configuration)
+   - [Router-A Configuration Details](#router-a-configuration-details)
+   - [Router-B Configuration Details](#router-b-configuration-details)
+   - [Router-C Configuration Details](#router-c-configuration-details)
+   - [Router-D Configuration Details](#router-d-configuration-details)
+
+4. [Additional Resources](#additional-resources)
+   - [Networking Courses and Tutorials](#networking-courses-and-tutorials)
+   - [Cisco Packet Tracer Shortcuts](#cisco-packet-tracer-shortcuts)
+   - [Cisco Packet Tracer GitHub Repositories](#cisco-packet-tracer-github-repositories)
+
+5. [Networking Commands](#networking-commands)
+   - [IPCONFIG](#ipconfig)
+   - [IPCONFIG /all](#ipconfig-all)
+   - [NSLOOKUP](#nslookup)
+   - [PING](#ping)
+   - [TRACERT](#tracert)
+
+6. [Commands Examples](#commands-examples)
+   - [IPCONFIG Example](#ipconfig-example)
+   - [IPCONFIG /all Example](#ipconfig-all-example)
+   - [NSLOOKUP Example](#nslookup-example)
+   - [PING Example](#ping-example)
+   - [TRACERT Example](#tracert-example)
+
+
+
+
+
 # Interchange IP Addresses on Cisco Router
 
 To resolve the overlapping IP address issue and interchange the IP addresses between `FastEthernet0/0` and `FastEthernet0/1`, follow these steps:
@@ -332,4 +374,66 @@ Tracing route to google.com [172.217.14.206] over a maximum of 30 hops:
   1     1 ms     <1 ms     <1 ms  router.local [192.168.1.1]
   2     10 ms      9 ms      9 ms  10.0.0.1
   3     15 ms     14 ms     15 ms  172.217.14.206
+```
+
+
+
+# InterVLAN
+
+![](assets/InterVLAN.jpg)
+
+## Switch Configuration
+```js
+Switch> enable                          # Enter enable mode  
+Switch# config terminal                 # Enter global configuration mode  
+Switch(config)# vlan 10                 # Create VLAN 10  
+Switch(config-vlan)# name HR             # Name VLAN 10 as HR  
+Switch(config-vlan)# vlan 20             # Create VLAN 20  
+Switch(config-vlan)# name IT             # Name VLAN 20 as IT  
+
+# Configure access ports for VLAN 10
+Switch(config-vlan)# interface fa0/1     # Select interface Fa0/1 -PC4(198.168.1.2)
+Switch(config-if)# switchport mode access # Set port to access mode  
+Switch(config-if)# switchport access vlan 10  # Assign port to VLAN 10  
+
+Switch(config-vlan)# interface fa0/2     # Select interface Fa0/2  -PC5(192.168.1.3)
+Switch(config-if)# switchport mode access # Set port to access mode  
+Switch(config-if)# switchport access vlan 10  # Assign port to VLAN 10  
+
+# Configure access ports for VLAN 20
+Switch(config-vlan)# interface fa0/3     # Select interface Fa0/3  -PC6(192.168.2.2)
+Switch(config-if)# switchport mode access # Set port to access mode  
+Switch(config-if)# switchport access vlan 20  # Assign port to VLAN 20  
+
+Switch(config-vlan)# interface fa0/4     # Select interface Fa0/4  -PC7(192.168.2.3)
+Switch(config-if)# switchport mode access # Set port to access mode  
+Switch(config-if)# switchport access vlan 20  # Assign port to VLAN 20  
+
+# Configure trunk port
+Switch(config-vlan)# interface fa0/5     # Select interface Fa0/5  -Port Connected to Router
+Switch(config-if)# switchport mode trunk  # Set port to trunk mode  
+
+```
+
+
+## Router Configuration
+
+```js
+Router> en                             # Enter enable mode  
+Router# conf t                         # Enter global configuration mode  
+
+# Configure the physical interface
+Router (config)# int fa0/0            # Select interface Fa0/0  
+Router (config-if)# no shutdown         # Bring the interface up  
+
+# Subinterface for VLAN 10
+Router (config-if)# int fa0/0.10       # Create subinterface Fa0/0.10  
+Router (config-subif)# encapsulation dot1Q 10  # Set encapsulation for VLAN 10  
+Router (config-subif)# ip add 198.168.1.1 255.255.255.0  # Assign IP address to subinterface  
+
+# Subinterface for VLAN 20
+Router (config-subif)# int fa0/0.20    # Create subinterface Fa0/0.20  
+Router (config-subif)# encapsulation dot1Q 20  # Set encapsulation for VLAN 20  
+Router (config-subif)# ip add 198.168.2.2 255.255.255.0  # Assign IP address to subinterface  
+
 ```
