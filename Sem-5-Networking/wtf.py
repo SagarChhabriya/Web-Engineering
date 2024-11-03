@@ -21,4 +21,4 @@ def make_commit(target_date: str):
     return os.system('git push')
 
 # Call the function with a specific target date
-make_commit("2024-11-03")
+make_commit("2024-11-01")
