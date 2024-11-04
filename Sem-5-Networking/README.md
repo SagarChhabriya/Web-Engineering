@@ -439,3 +439,12 @@ Router (config-subif)# ip add 198.168.2.2 255.255.255.0     # Assign IP address 
 
 ```
 
+
+
+## Nov 04 2024
+
+![image](https://github.com/user-attachments/assets/108c4a96-f041-41dc-a258-7929fe895413)
+
+- VTP Protocol for InterVLAN
+- vtp domain vtp server/client password: wtf
+
