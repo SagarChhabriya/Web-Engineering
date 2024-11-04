@@ -377,8 +377,9 @@ Tracing route to google.com [172.217.14.206] over a maximum of 30 hops:
 ```
 
 
+# InterVLAN Each VLAN having seperate port with access mode
 
-# InterVLAN
+# InterVLAN (Router on Stick Methodology: One Port with Trunk Mode)
 
 ![](assets/InterVLAN.jpg)
 
@@ -437,3 +438,4 @@ Router (config-subif)# encapsulation dot1Q 20               # Set encapsulation 
 Router (config-subif)# ip add 198.168.2.2 255.255.255.0     # Assign IP address to subinterface  
 
 ```
+
