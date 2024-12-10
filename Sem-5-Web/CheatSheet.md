@@ -1,3 +1,8 @@
+
+## Insert DB Code Path: C:\xampp\htdocs\demo\DB\1-Insert
+
+
+
 ## MID
 1. Control Structure in js in detail with examples and web applications and their advantages with examples in detail.
 2. Write down the code for
@@ -11,3 +16,5 @@
    - img and <a>
    - script and img
    - style and 
+
+

@@ -30,6 +30,10 @@
 
 
     <?php
+    $empid = "";
+    $ename = "";
+    $address = "";
+
     if(isset($_GET['sbt'])){  //if button is clicked
         $empid = $_GET['empid'];
         $ename  = $_GET['ename'];
