@@ -1,0 +1,22 @@
+#header,
+#footer {
+    border: 1px solid black;
+    height: 100px;
+    width: 600px;
+    color: blue;
+}
+
+#main {
+    border: 1px solid black;
+    display: flex;
+    height: 400px;
+    width: 600px;
+}
+
+#left,
+#mid,
+#right {
+    border: 1px solid black;
+    height: 400px;
+    width: 200px;
+}
