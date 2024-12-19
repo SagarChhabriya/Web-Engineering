@@ -1,8 +1,13 @@
+// Initialize the counter GLOBAL variable
+let counter = 1;
+
 function updateImage() {
-    let counter = 1;
-    if (coutner > 5)
-        coutner = 1;
-    document.getElementById("img").src = counter + ".png";
-    counter++;
+
+    let image = document.getElementById("image").src = `${counter++}.png`;
+
+    if (counter > 5)
+        counter = 1;
+
 }
+
 setInterval(updateImage, 100);
