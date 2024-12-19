@@ -24,4 +24,4 @@ function asc() {
     document.getElementById("mnt").innerHTML = mnt + " : ";
     document.getElementById("hour").innerHTML = hour + " : ";
 }
-setInterval(asc, 0.1);
+setInterval(asc, 100);
