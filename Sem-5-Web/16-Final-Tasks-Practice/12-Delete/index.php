@@ -48,14 +48,32 @@ include("dbcon.php");
                 echo "Error : " . mysqli_error($conn);
             }
         }
-        else{
-            echo "ID Not Found";
-        }
-
-
     }
     
     ?>
+    <table border="1" width="600px">
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Employee Salary</th>
+        </tr>
+        <?php
+        $result = mysqli_query($conn,"SELECT * FROM test");
+        if(mysqli_rows_num($result)>0){
+            while($row = mysqli_fetch_assoc($result)){
+                echo "<tr>
+                        <td>" . $row['empid'] . "</td>
+                        <td>" . $row['ename'] . "</td>
+                        <td>" . $row['salary'] . "</td>
+                    <tr>";
+            }
+        }
+        
+        ?>
 
+    </table>
+        <?php
+            mysqli_close($conn);
+        ?>
 </body>
 </html>

@@ -76,11 +76,8 @@
                         <td>" . $row["salary"] . "</td>
                     </tr>";
             }
-        } else {
-            echo "<tr><td colspan='3'>No records found</td></tr>";
-        }
+        } 
         ?>
-
     </table>
 
     <?php
