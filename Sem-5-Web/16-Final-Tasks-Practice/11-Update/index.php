@@ -23,7 +23,7 @@ include("dbcon.php");
         <label for="salary">Employee salary </label>
         <input type="text" name="salary" id="">
 
-        <button type="submit" name="sbt">Submit</button>
+        <button type="submit" name="update">Update</button>
         <button type="reset"> Reset </button>
 
     </form>
@@ -33,7 +33,7 @@ include("dbcon.php");
     
     $empid = $ename = $salary = "";
 
-    if(isset($_GET['sbt'])){
+    if(isset($_GET['update'])){
         $empid = $_GET['empid'];
         $ename = $_GET['ename'];
         $salary = $_GET['salary'];
@@ -42,7 +42,7 @@ include("dbcon.php");
         $result = mysqli_query($conn,"select * from temp where empid='$empid'");
 
         if(mysqli_num_rows($result)>0){
-            $query = "Update table temp SET ename='$ename' and salary='$salary' where empid='$empid'";
+            $query = "Update table temp SET ename='$ename', salary='$salary' where empid='$empid'";
 
             if(mysqli_query($conn,$query)){
                 echo "Record Updated Successfully";
@@ -57,11 +57,39 @@ include("dbcon.php");
 
     }
     
+    $result = mysqli_query($conn, "SELECT * from temp");
     
+    
+    ?>
+
+    <table border="1" width="600px">
+    <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+    </tr>
+    <?php
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_assoc($result)){
+                echo "<tr>
+                        <td>" . $row['empid'] . "</td>
+                        <td>" . $row['ename'] . "</td>
+                        <td>" . $row['salary'] . "</td>
+                    </tr>";
+            }
+        }
+        else{
+            echo "Error : " . mysqli_error($conn);
+        }
     
     
     ?>
 
 
+    </table>
+
+        <?php
+            mysqli_close($conn);
+        ?>
 </body>
 </html>
