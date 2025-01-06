@@ -46,4 +46,5 @@ def make_commit_with_file(target_date: str, file_path: str):
 # Call the function with a specific target date
 # make_commit("2025-01-04")
 # Custom file commit
-make_commit_with_file("2025-01-04", r"C:\Users\Mr Sagar Kumar\Desktop\Git Cheat Sheet.gif")
+make_commit_with_file(
+    "2025-01-03", r"D:\Ao\Code\WebCode\Web-Engineering\Sem-5-Networking\Git Cheat Sheet.gif")
