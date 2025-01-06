@@ -9,7 +9,7 @@ def make_commit(target_date: str):
     # Format the date for git
     date_str = current_date.strftime('%Y-%m-%d')
 
-    with open('README.md', 'a') as file:
+    with open('data.txt', 'a') as file:
         file.write(f'Notes: {date_str}\n')
 
     # Staging
