@@ -1,10 +1,11 @@
 import os
 from datetime import datetime
 
+
 def make_commit(target_date: str):
     # Parse the target date
     current_date = datetime.strptime(target_date, "%Y-%m-%d")
-    
+
     # Ensure the date is exactly what you expect
     print(f"Parsed date: {current_date}")
 
@@ -26,5 +27,6 @@ def make_commit(target_date: str):
     # Push the changes
     return os.system('git push')
 
+
 # Call the function with a specific target date
-make_commit("2025-03-04")
+make_commit("2025-03-20")
