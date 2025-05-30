@@ -52,7 +52,7 @@ if st.button("Shorten URL"):
         store_url(short_code, original_url)
 
         # Create the shortened URL (replace 'your-app-url' with your actual Streamlit Cloud app URL)
-        short_url = f"https://your-username-your-repo-name.streamlit.app/?short_code={short_code}"
+        short_url = f"https://tinyza.streamlit.app/?short_code={short_code}"
 
         # Display the shortened URL to the user
         st.success(f"Shortened URL: {short_url}")
