@@ -29,4 +29,4 @@ def make_commit(target_date: str):
 
 
 # Call the function with a specific target date
-make_commit("2025-05-23")
+make_commit("2025-06-02")
